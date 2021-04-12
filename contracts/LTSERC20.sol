@@ -22,6 +22,6 @@ contract LTSERC20 is ERC721 {
     }
 
     function mintLTS(uint256 amount) private {
-        _mint(msg.sender, amount);
+        _mint(owner, amount);
     }
 }
