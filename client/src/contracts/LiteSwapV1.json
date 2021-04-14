@@ -1,0 +1,191 @@
+{
+  "contractName": "LiteSwapV1",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":\"LiteSwapV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":{\"keccak256\":\"0x95c0e77385e0dc7479e2c6f54a8750909f4e5b4bce764676187edb50fe6ecf18\",\"urls\":[\"bzz-raw://7e1fca99ab33b99b1dea0a740c16d0dcab73dab691e9ad11877b9c49c60998d8\",\"dweb:/ipfs/Qmb6KYK2VJ6wrj7XuaNvCxhwNQ9qNPW9HaG62B8LGwZrWa\"]},\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol\":{\"keccak256\":\"0x96367726f70127810fa63582222daa09210dfa8f96b6b0e181c522acfc97c528\",\"urls\":[\"bzz-raw://eb20810b00697bfb5a6180b1dddafc3c5ca1382ac5c268fd96b6fd318593d037\",\"dweb:/ipfs/QmPYe8qzktK4ujNsGtPVgqQMxMhjHi8mELGMYFHtqQjZiy\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a7231582026df298e953fb14f17045699fef4097975c0daa7b1a2a708282a41be0433e5ae64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582026df298e953fb14f17045699fef4097975c0daa7b1a2a708282a41be0433e5ae64736f6c63430005100032",
+  "sourceMap": "104:36:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:36:2;;;;;;;",
+  "deployedSourceMap": "104:36:2:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.8.0;\n\nimport \"./interfaces/ILiteSwap.sol\";\n\ncontract LiteSwapV1 is ILiteSwap{\n\n}",
+  "sourcePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
+  "ast": {
+    "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
+    "exportedSymbols": {
+      "LiteSwapV1": [
+        126
+      ]
+    },
+    "id": 127,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 122,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
+        "file": "./interfaces/ILiteSwap.sol",
+        "id": 123,
+        "nodeType": "ImportDirective",
+        "scope": 127,
+        "sourceUnit": 130,
+        "src": "66:36:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 124,
+              "name": "ILiteSwap",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 129,
+              "src": "127:9:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_ILiteSwap_$129",
+                "typeString": "contract ILiteSwap"
+              }
+            },
+            "id": 125,
+            "nodeType": "InheritanceSpecifier",
+            "src": "127:9:2"
+          }
+        ],
+        "contractDependencies": [
+          129
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 126,
+        "linearizedBaseContracts": [
+          126,
+          129
+        ],
+        "name": "LiteSwapV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 127,
+        "src": "104:36:2"
+      }
+    ],
+    "src": "32:108:2"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
+      "exportedSymbols": {
+        "LiteSwapV1": [
+          126
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 122,
+        "name": "PragmaDirective",
+        "src": "32:32:2"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 130,
+          "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
+          "file": "./interfaces/ILiteSwap.sol",
+          "scope": 127,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 123,
+        "name": "ImportDirective",
+        "src": "66:36:2"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            129
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            126,
+            129
+          ],
+          "name": "LiteSwapV1",
+          "nodes": [
+            null
+          ],
+          "scope": 127
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "ILiteSwap",
+                  "referencedDeclaration": 129,
+                  "type": "contract ILiteSwap"
+                },
+                "id": 124,
+                "name": "UserDefinedTypeName",
+                "src": "127:9:2"
+              }
+            ],
+            "id": 125,
+            "name": "InheritanceSpecifier",
+            "src": "127:9:2"
+          }
+        ],
+        "id": 126,
+        "name": "ContractDefinition",
+        "src": "104:36:2"
+      }
+    ],
+    "id": 127,
+    "name": "SourceUnit",
+    "src": "32:108:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-14T02:33:57.121Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
