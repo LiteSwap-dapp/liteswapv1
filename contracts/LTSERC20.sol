@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.21 <0.8.0;
 
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
+//import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 
  /**
@@ -15,13 +15,15 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
      *
      * The Liteswap token inherits from the openzeppelin project for added advantage
      */
-contract LTSERC20 is ERC721 {
+contract LTSERC20 {
+    
     address private owner;
-    constructor() ERC721("LITESWAPTOKEN", "LTS") {
-        owner = msg.sender;
-    }
 
-    function mintLTS(uint256 amount) private {
-        _mint(owner, amount);
-    }
+    // constructor() public ERC20("LITESWAPTOKEN", "LTS") {
+    //     owner = msg.sender;
+    // }
+
+    // function mintLTS(uint256 amount) public {
+    //     _mint(owner, amount);
+    // }
 }

@@ -1,5 +1,5 @@
-var Migrations = artifacts.require("./Migrations.sol");
+var LiteSwapDAO = artifacts.require("./LiteSwapDAO.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(LiteSwapDAO);
 };

@@ -1,0 +1,177 @@
+{
+  "contractName": "LTSERC20",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"details\":\"Sets the values for {name} and {symbol}.     * The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it.     * All two of these values are immutable: they can only be set once during construction.     * The Liteswap token inherits from the openzeppelin project for added advantage\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":\"LTSERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":{\"keccak256\":\"0x0d709e74661e2bda657d4aa0ef73fcba91c1418cd7bc9d4499798ab8a753e16f\",\"urls\":[\"bzz-raw://b67c05c07996b59ecba93ff98673e6e70726e2f23265e6c90b9634683cefdd85\",\"dweb:/ipfs/QmXBvJXZghQhZCbvpR9JHJ7tpYTSNx6YoQMgqGKCfZptPD\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820f9a3020554675427280fd0a89ef9cea2ddb17695165cb467298ef1f5599f21ac64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820f9a3020554675427280fd0a89ef9cea2ddb17695165cb467298ef1f5599f21ac64736f6c63430005100032",
+  "sourceMap": "517:246:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;517:246:0;;;;;;;",
+  "deployedSourceMap": "517:246:0:-;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.8.0;\n\n//import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\n\n /**\n     * @dev Sets the values for {name} and {symbol}.\n     *\n     * The defaut value of {decimals} is 18. To select a different value for\n     * {decimals} you should overload it.\n     *\n     * All two of these values are immutable: they can only be set once during\n     * construction.\n     *\n     * The Liteswap token inherits from the openzeppelin project for added advantage\n     */\ncontract LTSERC20 {\n    \n    address private owner;\n\n    // constructor() public ERC20(\"LITESWAPTOKEN\", \"LTS\") {\n    //     owner = msg.sender;\n    // }\n\n    // function mintLTS(uint256 amount) public {\n    //     _mint(owner, amount);\n    // }\n}\n",
+  "sourcePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
+  "ast": {
+    "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
+    "exportedSymbols": {
+      "LTSERC20": [
+        4
+      ]
+    },
+    "id": 5,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@dev Sets the values for {name} and {symbol}.\n     * The defaut value of {decimals} is 18. To select a different value for\n{decimals} you should overload it.\n     * All two of these values are immutable: they can only be set once during\nconstruction.\n     * The Liteswap token inherits from the openzeppelin project for added advantage",
+        "fullyImplemented": true,
+        "id": 4,
+        "linearizedBaseContracts": [
+          4
+        ],
+        "name": "LTSERC20",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 3,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 4,
+            "src": "546:21:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "546:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "private"
+          }
+        ],
+        "scope": 5,
+        "src": "517:246:0"
+      }
+    ],
+    "src": "32:732:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
+      "exportedSymbols": {
+        "LTSERC20": [
+          4
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.8",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "32:32:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": "@dev Sets the values for {name} and {symbol}.\n     * The defaut value of {decimals} is 18. To select a different value for\n{decimals} you should overload it.\n     * All two of these values are immutable: they can only be set once during\nconstruction.\n     * The Liteswap token inherits from the openzeppelin project for added advantage",
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            4
+          ],
+          "name": "LTSERC20",
+          "scope": 5
+        },
+        "children": [
+          {
+            "attributes": {
+              "constant": false,
+              "name": "owner",
+              "scope": 4,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "address",
+              "value": null,
+              "visibility": "private"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "address",
+                  "stateMutability": "nonpayable",
+                  "type": "address"
+                },
+                "id": 2,
+                "name": "ElementaryTypeName",
+                "src": "546:7:0"
+              }
+            ],
+            "id": 3,
+            "name": "VariableDeclaration",
+            "src": "546:21:0"
+          }
+        ],
+        "id": 4,
+        "name": "ContractDefinition",
+        "src": "517:246:0"
+      }
+    ],
+    "id": 5,
+    "name": "SourceUnit",
+    "src": "32:732:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.4",
+  "updatedAt": "2021-04-14T02:33:57.107Z",
+  "devdoc": {
+    "details": "Sets the values for {name} and {symbol}.     * The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it.     * All two of these values are immutable: they can only be set once during construction.     * The Liteswap token inherits from the openzeppelin project for added advantage",
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
