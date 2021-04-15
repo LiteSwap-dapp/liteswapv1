@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.4.21 <0.8.0;
 
-//import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 
  /**
@@ -19,11 +19,11 @@ contract LTSERC20 {
     
     address private owner;
 
-    // constructor() public ERC20("LITESWAPTOKEN", "LTS") {
-    //     owner = msg.sender;
-    // }
+    constructor() public ERC20("LITESWAPTOKEN", "LTS") {
+        owner = msg.sender;
+    }
 
-    // function mintLTS(uint256 amount) public {
-    //     _mint(owner, amount);
-    // }
+    function mintLTS(uint256 amount) public virtual {
+        _mint(owner, amount);
+    }
 }

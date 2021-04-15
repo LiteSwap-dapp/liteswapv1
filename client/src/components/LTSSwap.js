@@ -1,12 +1,12 @@
 import React from "react";
 
-const CardDao = ()=> {
+const LTSSwap = ()=> {
     return(
         <main>
         <div className="main-wrapper">
         <div class="card">
         <div class="card-body">
-          This is some text within a card body for the dao group of cooperative.
+          This is some text within a card body.
         </div>
       </div>
       </div>
@@ -14,4 +14,4 @@ const CardDao = ()=> {
     );
 }
 
-export default CardDao;
+export default LTSSwap;

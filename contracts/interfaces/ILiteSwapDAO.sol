@@ -30,7 +30,7 @@ interface ILiteSwapDAO {
      */
     
 
-    function addLiquidityToLTSGroupAccount(address payable member, uint256 amount) external returns (bool, uint256);
+    function addLiquidityToLTSGroupAccount(address payable member, address groupAddr, uint256 amount) external returns (bool, uint256);
           
     /**
      * @dev get group total suppy
