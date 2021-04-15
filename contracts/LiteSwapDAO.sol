@@ -2,10 +2,13 @@
 pragma solidity >=0.4.21 <0.8.0;
 
 import "./interfaces/ILiteSwapDAO.sol";
+import "./LTSERC20.sol";
 
-contract LiteSwapDAO {
+contract LiteSwapDAO is LTSERC20{
 
     uint public  groupCount = 0;
+
+    uint private groundAccountBalance = 0;
 
     address public owner;
 
@@ -29,6 +32,7 @@ contract LiteSwapDAO {
 
     constructor() public {
         owner = msg.sender;
+        _balances[address(this)] = groundAccountBalance;
     }
 
     //add members to group
@@ -36,7 +40,7 @@ contract LiteSwapDAO {
          address groupAddress = address(this);
          liteSwapGroupMap[groupAddress].groupName = gName;
          liteSwapGroupMap[groupAddress].groupCreator = owner;
-         liteSwapGroupMap[groupAddress].groupBalance = 0;
+         liteSwapGroupMap[groupAddress].groupBalance = groundAccountBalance;
          liteSwapGroupMap[groupAddress].liteSwapGroupMembers.push(owner);
          liteSwapGroupMap[groupAddress]._groupIndex = liteSwapGroupId.length - 1;
 
@@ -65,14 +69,34 @@ contract LiteSwapDAO {
   
     function checkIfMemberAlreadyExist(address group_addr) public view returns (bool) {
         address[] memory groupMembers = liteSwapGroupMap[group_addr].liteSwapGroupMembers;
-        if(groupMembers.length == 0)
-        return false;
+        if(groupMembers.length == 0){
+           return false;  
+        }
+       
         for(uint i = 0; i < groupMembers.length; i++ ){
             if(groupMembers[i] == msg.sender) {
                 return true;
             }
         }
     }
+
+
+    /**
+     * @dev Add funds to the group
+     */
+    
+     function addLiquidityToLTSGroupAccount(
+         address payable groupAddr, 
+         uint256 amount) external returns (bool, uint256){
+             
+        //  require(member.balance <= amount, "No Sufficient Fund!");
+        //  require((member == address(0)), "No Valid Account Found");
+
+            _balances[msg.sender] -= amount;
+            _balances[groupAddr] += amount;
+
+            
+        }
 
     /**
      * @dev get all the groups
@@ -81,5 +105,9 @@ contract LiteSwapDAO {
     function getGroupCount() public view returns (uint256){
         return liteSwapGroupId.length;
     }
+
+    // fallback()external payable {
+    //     require(msg.value == 0);
+    // }
 
 }

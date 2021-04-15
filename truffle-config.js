@@ -15,6 +15,12 @@ module.exports = {
       timeoutBlocks: 200,
       skipDryRun: true
     }
+  },
+  compilers: {
+    solc: {
+        version: "<0.8.0" // or find out what the latest version is and use that instead
+    }
   }
+
 
 };

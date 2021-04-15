@@ -5,7 +5,7 @@ import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
-import Connection from  "./Connections.js";
+import Connection from  "./Connection.js";
 import Home from  "./components/Home.js";
 import Swapping from  "./components/LTSSwap.js";
 import Cooperative from  "./components/CardDao.js";

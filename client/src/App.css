@@ -78,3 +78,20 @@ button{
   width: 100%;
 }
 
+@media(max-width:450px){
+  .cardWrapper{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
+
+  .main-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+}
+
