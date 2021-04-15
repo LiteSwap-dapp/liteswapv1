@@ -57,16 +57,16 @@ const App = () => {
                 <a class="nav-link" href="/swap">Swap</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/cooperative">Credit Union </a>
+                <a class="nav-link" href="/cooperative">Pool</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabIndex="-1" aria-disabled="true">Lite</a>
+                <a class="nav-link " href="#" tabIndex="-1" aria-disabled="true">Stake</a>
               </li>
             </ul>
           </div>
-          <div className="wallet">
+       
           <Connection />
-          </div>
+        
         </header>
         <BrowserRouter>
         <Switch>
@@ -83,7 +83,9 @@ const App = () => {
             
         </BrowserRouter>
    
-        <footer></footer>
+        <footer>
+          kdfkemefpf
+        </footer>
       </div>
     );
   

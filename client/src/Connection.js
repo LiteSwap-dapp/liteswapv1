@@ -9,7 +9,12 @@ function Connection() {
 
     }
 
-    return(  <button type="button" onClick={connectWallet} class="btn btn-primary">Connect Wallet</button>)
+    return(     
+    <div className="wallet">
+      <button type="button" onClick={connectWallet} class="btn btn-primary">Connect Wallet</button>
+      </div>
+      
+      )
 }
 
 
