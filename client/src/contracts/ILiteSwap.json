@@ -12,14 +12,14 @@
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
     "exportedSymbols": {
       "ILiteSwap": [
-        129
+        207
       ]
     },
-    "id": 130,
+    "id": 208,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 128,
+        "id": 206,
         "literals": [
           "solidity",
           ">=",
@@ -38,14 +38,14 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 129,
+        "id": 207,
         "linearizedBaseContracts": [
-          129
+          207
         ],
         "name": "ILiteSwap",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 130,
+        "scope": 208,
         "src": "66:29:3"
       }
     ],
@@ -56,7 +56,7 @@
       "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
       "exportedSymbols": {
         "ILiteSwap": [
-          129
+          207
         ]
       }
     },
@@ -73,7 +73,7 @@
             ".0"
           ]
         },
-        "id": 128,
+        "id": 206,
         "name": "PragmaDirective",
         "src": "32:32:3"
       },
@@ -89,20 +89,20 @@
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            129
+            207
           ],
           "name": "ILiteSwap",
           "nodes": [
             null
           ],
-          "scope": 130
+          "scope": 208
         },
-        "id": 129,
+        "id": 207,
         "name": "ContractDefinition",
         "src": "66:29:3"
       }
     ],
-    "id": 130,
+    "id": 208,
     "name": "SourceUnit",
     "src": "32:63:3"
   },
@@ -112,7 +112,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-14T02:33:57.122Z",
+  "updatedAt": "2021-04-14T21:46:23.965Z",
   "devdoc": {
     "methods": {}
   },
