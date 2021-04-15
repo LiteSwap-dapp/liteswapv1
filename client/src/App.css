@@ -1,22 +1,60 @@
-.App {
-  text-align: center;
+body{
+  /* background-color: #282c34; */
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
+.container-lts{
+  margin: 0;
+  width: 100vw !important;
+  height: 100vh;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-template-rows: 100%;
+  height: 5rem;
+  box-shadow: 1px 5px 20px #ccc;
+  margin-bottom: 1rem;
+}
+.liteswap-logo{
+  width: 2rem;
+}
+main{
+  display: grid;
+  place-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 90%;
+  overflow-x: hidden;
+}
+.main-wrapper{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
 }
 
-.App-link {
-  color: #09d3ac;
+.menu{
+  display: flex;
+  align-items: center;
+  padding-left:3rem;
 }
+.menu h1{
+  font-size: 1em;
+  padding-left: 0.5rem;
+  font-weight: bolder;
+}
+
+.wallet{
+  display: flex;
+  align-items: center;
+
+}
+.card{
+  box-shadow: 1px 5px 20px #ccc !important;
+  width: 600px !important;
+  height:400px;
+}
+

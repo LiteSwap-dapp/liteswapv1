@@ -166,7 +166,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-14T02:33:57.107Z",
+  "updatedAt": "2021-04-14T21:46:23.913Z",
   "devdoc": {
     "details": "Sets the values for {name} and {symbol}.     * The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it.     * All two of these values are immutable: they can only be set once during construction.     * The Liteswap token inherits from the openzeppelin project for added advantage",
     "methods": {}

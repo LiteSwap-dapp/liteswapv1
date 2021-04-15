@@ -12,14 +12,14 @@
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
     "exportedSymbols": {
       "LiteSwapV1": [
-        126
+        204
       ]
     },
-    "id": 127,
+    "id": 205,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 122,
+        "id": 200,
         "literals": [
           "solidity",
           ">=",
@@ -35,10 +35,10 @@
       {
         "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
         "file": "./interfaces/ILiteSwap.sol",
-        "id": 123,
+        "id": 201,
         "nodeType": "ImportDirective",
-        "scope": 127,
-        "sourceUnit": 130,
+        "scope": 205,
+        "sourceUnit": 208,
         "src": "66:36:2",
         "symbolAliases": [],
         "unitAlias": ""
@@ -49,36 +49,36 @@
             "arguments": null,
             "baseName": {
               "contractScope": null,
-              "id": 124,
+              "id": 202,
               "name": "ILiteSwap",
               "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 129,
+              "referencedDeclaration": 207,
               "src": "127:9:2",
               "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ILiteSwap_$129",
+                "typeIdentifier": "t_contract$_ILiteSwap_$207",
                 "typeString": "contract ILiteSwap"
               }
             },
-            "id": 125,
+            "id": 203,
             "nodeType": "InheritanceSpecifier",
             "src": "127:9:2"
           }
         ],
         "contractDependencies": [
-          129
+          207
         ],
         "contractKind": "contract",
         "documentation": null,
         "fullyImplemented": true,
-        "id": 126,
+        "id": 204,
         "linearizedBaseContracts": [
-          126,
-          129
+          204,
+          207
         ],
         "name": "LiteSwapV1",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 127,
+        "scope": 205,
         "src": "104:36:2"
       }
     ],
@@ -89,7 +89,7 @@
       "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
       "exportedSymbols": {
         "LiteSwapV1": [
-          126
+          204
         ]
       }
     },
@@ -106,42 +106,42 @@
             ".0"
           ]
         },
-        "id": 122,
+        "id": 200,
         "name": "PragmaDirective",
         "src": "32:32:2"
       },
       {
         "attributes": {
-          "SourceUnit": 130,
+          "SourceUnit": 208,
           "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
           "file": "./interfaces/ILiteSwap.sol",
-          "scope": 127,
+          "scope": 205,
           "symbolAliases": [
             null
           ],
           "unitAlias": ""
         },
-        "id": 123,
+        "id": 201,
         "name": "ImportDirective",
         "src": "66:36:2"
       },
       {
         "attributes": {
           "contractDependencies": [
-            129
+            207
           ],
           "contractKind": "contract",
           "documentation": null,
           "fullyImplemented": true,
           "linearizedBaseContracts": [
-            126,
-            129
+            204,
+            207
           ],
           "name": "LiteSwapV1",
           "nodes": [
             null
           ],
-          "scope": 127
+          "scope": 205
         },
         "children": [
           {
@@ -153,25 +153,25 @@
                 "attributes": {
                   "contractScope": null,
                   "name": "ILiteSwap",
-                  "referencedDeclaration": 129,
+                  "referencedDeclaration": 207,
                   "type": "contract ILiteSwap"
                 },
-                "id": 124,
+                "id": 202,
                 "name": "UserDefinedTypeName",
                 "src": "127:9:2"
               }
             ],
-            "id": 125,
+            "id": 203,
             "name": "InheritanceSpecifier",
             "src": "127:9:2"
           }
         ],
-        "id": 126,
+        "id": 204,
         "name": "ContractDefinition",
         "src": "104:36:2"
       }
     ],
-    "id": 127,
+    "id": 205,
     "name": "SourceUnit",
     "src": "32:108:2"
   },
@@ -179,9 +179,17 @@
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xC0c05495de9aA8484D648c6D1Be2B9c197BBCaed",
+      "transactionHash": "0x84bc5068e0355d0c4991bdd785567a9641894394c034de269e035a07e087bbed"
+    }
+  },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-14T02:33:57.121Z",
+  "updatedAt": "2021-04-14T22:46:38.024Z",
+  "networkType": "ethereum",
   "devdoc": {
     "methods": {}
   },
