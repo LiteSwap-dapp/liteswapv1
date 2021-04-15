@@ -4,6 +4,9 @@ body{
   padding: 0;
   margin: 0;
 }
+a{
+  color: #6806a1;
+}
 .container-lts{
   margin: 0;
   width: 100vw !important;
@@ -54,15 +57,36 @@ main{
 
 }
 .card{
-  box-shadow: 0px 0px 50px #ccc !important;
+  box-shadow: 0px 14px 20px rgb(49, 2, 61) !important;
   width: 600px !important;
-  height:400px;
+  height:auto;
   border-radius: 2em !important;
+  padding: 3rem;
+  z-index: 3;
 }
 
 button{
   position: absolute;
   right: 1.5rem;
+	height: 50px;
+	width: 280px;
+	border: 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  z-index: -2;
+  background-image: linear-gradient(to right, #fc2b6d, #6806a1);
+}
+
+
+
+.card-button{
+  position: absolute;
+  left:0;
+  margin-left: 2em;
 }
 
 .cardWrapper{
@@ -76,6 +100,28 @@ button{
 }
 .imgWrapper img {
   width: 100%;
+}
+
+.img{
+  width: 100%;
+
+}
+
+.divider{
+  width: 100vw;
+  height: 50%;
+  z-index: 2;
+  background: #6806a1;
+  position: absolute;
+  bottom: 0;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
 }
 
 @media(max-width:450px){
