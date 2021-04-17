@@ -1,9 +1,9 @@
 import React from "react";
 
-const Home = ()=> {
+const Home = ({setView})=> {
     return(
         <main>
-          <div className="divider"></div>
+   
         <div className="main-wrapper">
         <div class="card mb-3" style={{maxWidth: "540px"}}>
   <div class="row g-0">
@@ -14,7 +14,7 @@ const Home = ()=> {
       <div class="card-body">
         <h2 class="card-title">Group Pool</h2>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <button type="button"  class="btn btn-primary card-button card-text">Pool
+        <button type="button" onClick={ ()=>setView("pool")}  class="btn btn-primary card-button card-text">Pool
         <div className="fill-one"></div>
         </button>
       </div>
@@ -31,7 +31,7 @@ const Home = ()=> {
       <div class="card-body">
         <h2 class="card-title">Exchange Token</h2>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <button type="button"  class="btn btn-primary card-button card-text">Swap</button>
+        <button type="button" onClick={ ()=>setView("swap")}  class="btn btn-primary card-button card-text">Swap</button>
 
       </div>
           
@@ -48,7 +48,7 @@ const Home = ()=> {
       <div class="card-body">
         <h2 class="card-title">Farm Token</h2>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <button type="button"  class="btn btn-primary card-button card-text">Farm</button>
+        <button type="button"  onClick={ ()=>setView("stake")} class="btn btn-primary card-button card-text">Farm</button>
       </div>
     </div>
   </div>

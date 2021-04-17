@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.21 <0.8.0;
+pragma solidity ^0.8.0;
 
 interface ILiteSwapDAO {
 
@@ -30,7 +30,7 @@ interface ILiteSwapDAO {
      */
     
 
-    function addLiquidityToLTSGroupAccount(address payable member, address groupAddr, uint256 amount) external returns (bool, uint256);
+    function addLiquidityToLTSGroupAccount(address payable groupAddr, uint256 amount) external returns (bool, uint256);
           
     /**
      * @dev get group total suppy
