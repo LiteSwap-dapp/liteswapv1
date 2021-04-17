@@ -1,199 +1,185 @@
 {
   "contractName": "LiteSwapV1",
   "abi": [],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":\"LiteSwapV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":{\"keccak256\":\"0x03008c9322a87d4a564785b4a3955be74f1e3f8389b4ed8d382ac6303725778b\",\"urls\":[\"bzz-raw://66c998cdcf3f855f23e94d78ba56aad230dcfa89dee15c975c5a265503e3d756\",\"dweb:/ipfs/QmYe1Fx6H3hjgitywLiWfwmDUsadvsn7seuHUQQuKVF8Pj\"]},\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol\":{\"keccak256\":\"0x34b7b8d63734514a29eeb939030a729c78d631fe997f813694a92913dad52a98\",\"urls\":[\"bzz-raw://7f747f043cf671727224d08a26f2798e2c07ad95b24ad00ffacc354433647510\",\"dweb:/ipfs/QmZ8YaE2NQXB2JrnzY12w1tMgBZZdghGHDFeefrJ452fJ5\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a723158209ffffed86da34601257371f905de757719cb14ed69b633a16b0843fa981197f464736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a723158209ffffed86da34601257371f905de757719cb14ed69b633a16b0843fa981197f464736f6c63430005100032",
-  "sourceMap": "104:36:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;104:36:3;;;;;;;",
-  "deployedSourceMap": "104:36:3:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.8.0;\n\nimport \"./interfaces/ILiteSwap.sol\";\n\ncontract LiteSwapV1 is ILiteSwap{\n\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":\"LiteSwapV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol\":{\"keccak256\":\"0x659d239c5a3455ae537f87dd70fbffac9b1743ab9ac611ac68b3d3420e41a5b2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://dbcabf0961e3b33dae44ea78f1c92b93bcaa419f4f32c2dc93d68cee247fe52d\",\"dweb:/ipfs/QmSAefE6Ns9XVfr7dZkv5QMKeteCT2yZGZuc1LshYd2ZVk\"]},\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol\":{\"keccak256\":\"0x60edcdc9a7760d9fb3c403ad377f190ec19c1c4803147514b55fb983f1d8e4cd\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb16ea2860de37ecbdc1c97b07cbb82c3ce023b21ee083e4c49674cbb8280ad4\",\"dweb:/ipfs/QmfK87UEizciMgav1qAv9pBN9GRp7mumLUzX18SqQ8UJyb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea2646970667358221220f9877643f3a038f1b12d753c5e5380e3d956d99a458c718d2edc318e0d251dc564736f6c63430008030033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220f9877643f3a038f1b12d753c5e5380e3d956d99a458c718d2edc318e0d251dc564736f6c63430008030033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "96:36:5:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "96:36:5:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\nimport \"./interfaces/ILiteSwap.sol\";\n\ncontract LiteSwapV1 is ILiteSwap{\n\n}",
   "sourcePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
   "ast": {
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
     "exportedSymbols": {
+      "ILiteSwap": [
+        544
+      ],
       "LiteSwapV1": [
-        244
+        539
       ]
     },
-    "id": 245,
+    "id": 540,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 240,
+        "id": 535,
         "literals": [
           "solidity",
-          ">=",
-          "0.4",
-          ".22",
-          "<",
+          "^",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:32:3"
+        "src": "33:23:5"
       },
       {
         "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
         "file": "./interfaces/ILiteSwap.sol",
-        "id": 241,
+        "id": 536,
+        "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 245,
-        "sourceUnit": 248,
-        "src": "66:36:3",
+        "scope": 540,
+        "sourceUnit": 545,
+        "src": "58:36:5",
         "symbolAliases": [],
         "unitAlias": ""
       },
       {
+        "abstract": false,
         "baseContracts": [
           {
-            "arguments": null,
             "baseName": {
-              "contractScope": null,
-              "id": 242,
+              "id": 537,
               "name": "ILiteSwap",
-              "nodeType": "UserDefinedTypeName",
-              "referencedDeclaration": 247,
-              "src": "127:9:3",
-              "typeDescriptions": {
-                "typeIdentifier": "t_contract$_ILiteSwap_$247",
-                "typeString": "contract ILiteSwap"
-              }
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 544,
+              "src": "119:9:5"
             },
-            "id": 243,
+            "id": 538,
             "nodeType": "InheritanceSpecifier",
-            "src": "127:9:3"
+            "src": "119:9:5"
           }
         ],
         "contractDependencies": [
-          247
+          544
         ],
         "contractKind": "contract",
-        "documentation": null,
         "fullyImplemented": true,
-        "id": 244,
+        "id": 539,
         "linearizedBaseContracts": [
-          244,
-          247
+          539,
+          544
         ],
         "name": "LiteSwapV1",
+        "nameLocation": "105:10:5",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 245,
-        "src": "104:36:3"
+        "scope": 540,
+        "src": "96:36:5"
       }
     ],
-    "src": "32:108:3"
+    "src": "33:99:5"
   },
   "legacyAST": {
-    "attributes": {
-      "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
-      "exportedSymbols": {
-        "LiteSwapV1": [
-          244
-        ]
-      }
+    "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
+    "exportedSymbols": {
+      "ILiteSwap": [
+        544
+      ],
+      "LiteSwapV1": [
+        539
+      ]
     },
-    "children": [
+    "id": 540,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "literals": [
-            "solidity",
-            ">=",
-            "0.4",
-            ".22",
-            "<",
-            "0.8",
-            ".0"
-          ]
-        },
-        "id": 240,
-        "name": "PragmaDirective",
-        "src": "32:32:3"
+        "id": 535,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:5"
       },
       {
-        "attributes": {
-          "SourceUnit": 248,
-          "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
-          "file": "./interfaces/ILiteSwap.sol",
-          "scope": 245,
-          "symbolAliases": [
-            null
-          ],
-          "unitAlias": ""
-        },
-        "id": 241,
-        "name": "ImportDirective",
-        "src": "66:36:3"
+        "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
+        "file": "./interfaces/ILiteSwap.sol",
+        "id": 536,
+        "nameLocation": "-1:-1:-1",
+        "nodeType": "ImportDirective",
+        "scope": 540,
+        "sourceUnit": 545,
+        "src": "58:36:5",
+        "symbolAliases": [],
+        "unitAlias": ""
       },
       {
-        "attributes": {
-          "contractDependencies": [
-            247
-          ],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            244,
-            247
-          ],
-          "name": "LiteSwapV1",
-          "nodes": [
-            null
-          ],
-          "scope": 245
-        },
-        "children": [
+        "abstract": false,
+        "baseContracts": [
           {
-            "attributes": {
-              "arguments": null
+            "baseName": {
+              "id": 537,
+              "name": "ILiteSwap",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 544,
+              "src": "119:9:5"
             },
-            "children": [
-              {
-                "attributes": {
-                  "contractScope": null,
-                  "name": "ILiteSwap",
-                  "referencedDeclaration": 247,
-                  "type": "contract ILiteSwap"
-                },
-                "id": 242,
-                "name": "UserDefinedTypeName",
-                "src": "127:9:3"
-              }
-            ],
-            "id": 243,
-            "name": "InheritanceSpecifier",
-            "src": "127:9:3"
+            "id": 538,
+            "nodeType": "InheritanceSpecifier",
+            "src": "119:9:5"
           }
         ],
-        "id": 244,
-        "name": "ContractDefinition",
-        "src": "104:36:3"
+        "contractDependencies": [
+          544
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "id": 539,
+        "linearizedBaseContracts": [
+          539,
+          544
+        ],
+        "name": "LiteSwapV1",
+        "nameLocation": "105:10:5",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 540,
+        "src": "96:36:5"
       }
     ],
-    "id": 245,
-    "name": "SourceUnit",
-    "src": "32:108:3"
+    "src": "33:99:5"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
   },
   "networks": {
     "5777": {
       "events": {},
       "links": {},
-      "address": "0xA8C76e15589b4a638cd4eC6cb596f5c3be7044e6",
-      "transactionHash": "0xf9ced1c7671946fcabe64fed53fa460607e338e756b8d6d048590512aef501a2"
+      "address": "0x413b3E3aEFD730CD5A69a872B339652e05C0310B",
+      "transactionHash": "0x8697c96df1974ecbd85351dc7b438ea0bbfe2658a57b294100e92ecfdc5dbcb4"
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-17T06:04:11.276Z",
+  "updatedAt": "2021-04-17T16:01:46.492Z",
   "networkType": "ethereum",
   "devdoc": {
-    "methods": {}
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

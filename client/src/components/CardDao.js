@@ -1,8 +1,25 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
-const CardDao = ({contract, accounts})=> {
+const CardDao = ({contract, accounts, web3})=> {
 
-  console.log(contract)
+ const [show, setShow] = useState(false);
+
+
+
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => {
+    setShow(true);
+    console.log(contract.methods.getcooperativeGroupNames().call((error)=> {
+      console.log(error)
+    }).then((res)=>{
+      console.log(res)
+    }))
+  }
+
     return(
         <main>
         <div className="main-other">
@@ -13,9 +30,11 @@ const CardDao = ({contract, accounts})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body text-left">
-                <button className="button-dao" onClick={()=> contract.methods.createLTSGroup("Opebi").send({
+                <button className="button-dao" onClick={()=> contract.methods.createCooperativeGroup("Surulere", 10).send({
                                                         from: accounts[0],
-                                                     }).then(res => console.log(res)) }>Create a Cooperative</button>
+                                                        value: web3.utils.toWei( (20).toString() , 'ether'),
+                                                         gas: 30000, gasPriceInWei : 1000
+                                                         }).then(res => console.log(res)) }  data-bs-toggle="modal" data-bs-target="#joindao">Create a Cooperative</button>
                   </div>
                 <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
@@ -25,7 +44,7 @@ const CardDao = ({contract, accounts})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body">
-                <button className="button-dao" data-bs-toggle="modal" data-bs-target="#dao">Join a Cooperative</button>
+                <Button className="button-dao" onClick={handleShow}>Join a Cooperative</Button>
             
                 </div>
                 <div className="align-self-center">
@@ -50,23 +69,26 @@ const CardDao = ({contract, accounts})=> {
       {/* </div> */}
       </div>
 
-      <div className="modal fade" id="dao" tabIndex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      <div className="modal-header">
-        <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div className="modal-body">
-        ...
-      </div>
-      <div className="modal-footer">
-        <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+       </Modal.Header>
+        <Modal.Body><Form>
+  <Form.Group controlId="exampleForm.ControlInput1">
+
+  </Form.Group>
+  <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Select Group to Join</Form.Label>
+    <Form.Control as="select">
+ 
+   
+    </Form.Control>
+  </Form.Group>
+  </Form>
+  </Modal.Body>
+  
+      </Modal>
+
+
       </main>
     );
 }

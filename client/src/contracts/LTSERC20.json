@@ -3,62 +3,71 @@
   "abi": [
     {
       "inputs": [],
-      "payable": false,
       "stateMutability": "nonpayable",
       "type": "constructor"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"details\":\"Sets the values for {name} and {symbol}.     * The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it.     * All two of these values are immutable: they can only be set once during construction.     * The Liteswap token inherits from the openzeppelin project for added advantage\",\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":\"LTSERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":{\"keccak256\":\"0x386295abcff4bec6e28e68e6c0e92d2acbb0f3f3f288cd9803e0e0df87a277e3\",\"urls\":[\"bzz-raw://dc008c140f880a4afd1000aec4985e1a4c216e506de91266f4af478e9d089830\",\"dweb:/ipfs/QmTVxieYKBxEnkihGNay37fBPK9fRp3mJni215mCi53veZ\"]}},\"version\":1}",
-  "bytecode": "0x6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603e80605d6000396000f3fe6080604052600080fdfea265627a7a7231582035a5f5af1e449188a71a4bb9e6d7bae9afee0e7e7ea264b2970eb59b060110cc64736f6c63430005100032",
-  "deployedBytecode": "0x6080604052600080fdfea265627a7a7231582035a5f5af1e449188a71a4bb9e6d7bae9afee0e7e7ea264b2970eb59b060110cc64736f6c63430005100032",
-  "sourceMap": "517:221:0:-;;;574:57;8:9:-1;5:2;;;30:1;27;20:12;5:2;574:57:0;614:10;606:5;;:18;;;;;;;;;;;;;;;;;;517:221;;;;;;",
-  "deployedSourceMap": "517:221:0:-;;;;;",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.8.0;\n\n//import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\n\n /**\n     * @dev Sets the values for {name} and {symbol}.\n     *\n     * The defaut value of {decimals} is 18. To select a different value for\n     * {decimals} you should overload it.\n     *\n     * All two of these values are immutable: they can only be set once during\n     * construction.\n     *\n     * The Liteswap token inherits from the openzeppelin project for added advantage\n     */\ncontract LTSERC20 {\n    \n    address private owner;\n\n    constructor() public  {\n        owner = msg.sender;\n    }\n\n    // function mintLTS(uint256 amount) public virtual {\n    //     _mint(owner, amount);\n    // }\n    \n}\n",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"details\":\"Sets the values for {name} and {symbol}. The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it. All two of these values are immutable: they can only be set once during construction. The Liteswap token inherits from the openzeppelin project for added advantage\",\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":\"LTSERC20\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol\":{\"keccak256\":\"0x55cab00e464df0ec1cd3c98605a73fe6b75f9176853a33e8c28d0b7937e794f9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f2a951feadfa50aec78a3d49703da207bdc4f7f1f55193d588aff652b21cf9c2\",\"dweb:/ipfs/QmQU3iN2mBkGKM5pgpKBTyeqh4F7UUFgkvt5QHpeBQRneD\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603f80605d6000396000f3fe6080604052600080fdfea2646970667358221220c72296a1c8cbefdfb35e4bb89b34c9d326ed97dcb0ce28fac100bfca4fd8c7a564736f6c63430008030033",
+  "deployedBytecode": "0x6080604052600080fdfea2646970667358221220c72296a1c8cbefdfb35e4bb89b34c9d326ed97dcb0ce28fac100bfca4fd8c7a564736f6c63430008030033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "509:221:0:-:0;;;566:57;;;;;;;;;;606:10;598:5;;:18;;;;;;;;;;;;;;;;;;509:221;;;;;;",
+  "deployedSourceMap": "509:221:0:-:0;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\n\npragma solidity ^0.8.0;\n\n//import \"@openzeppelin/contracts/token/ERC20/ERC20.sol\";\n\n\n /**\n     * @dev Sets the values for {name} and {symbol}.\n     *\n     * The defaut value of {decimals} is 18. To select a different value for\n     * {decimals} you should overload it.\n     *\n     * All two of these values are immutable: they can only be set once during\n     * construction.\n     *\n     * The Liteswap token inherits from the openzeppelin project for added advantage\n     */\ncontract LTSERC20 {\n    \n    address private owner;\n\n    constructor() public  {\n        owner = msg.sender;\n    }\n\n    // function mintLTS(uint256 amount) public virtual {\n    //     _mint(owner, amount);\n    // }\n    \n}\n",
   "sourcePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
   "ast": {
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
     "exportedSymbols": {
       "LTSERC20": [
-        13
+        14
       ]
     },
-    "id": 14,
+    "id": 15,
+    "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
         "literals": [
           "solidity",
-          ">=",
-          "0.4",
-          ".22",
-          "<",
+          "^",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:32:0"
+        "src": "33:23:0"
       },
       {
+        "abstract": false,
         "baseContracts": [],
         "contractDependencies": [],
         "contractKind": "contract",
-        "documentation": "@dev Sets the values for {name} and {symbol}.\n     * The defaut value of {decimals} is 18. To select a different value for\n{decimals} you should overload it.\n     * All two of these values are immutable: they can only be set once during\nconstruction.\n     * The Liteswap token inherits from the openzeppelin project for added advantage",
+        "documentation": {
+          "id": 2,
+          "nodeType": "StructuredDocumentation",
+          "src": "119:389:0",
+          "text": " @dev Sets the values for {name} and {symbol}.\n The defaut value of {decimals} is 18. To select a different value for\n {decimals} you should overload it.\n All two of these values are immutable: they can only be set once during\n construction.\n The Liteswap token inherits from the openzeppelin project for added advantage"
+        },
         "fullyImplemented": true,
-        "id": 13,
+        "id": 14,
         "linearizedBaseContracts": [
-          13
+          14
         ],
         "name": "LTSERC20",
+        "nameLocation": "518:8:0",
         "nodeType": "ContractDefinition",
         "nodes": [
           {
             "constant": false,
-            "id": 3,
+            "id": 4,
+            "mutability": "mutable",
             "name": "owner",
+            "nameLocation": "554:5:0",
             "nodeType": "VariableDeclaration",
-            "scope": 13,
-            "src": "546:21:0",
+            "scope": 14,
+            "src": "538:21:0",
             "stateVariable": true,
             "storageLocation": "default",
             "typeDescriptions": {
@@ -66,41 +75,38 @@
               "typeString": "address"
             },
             "typeName": {
-              "id": 2,
+              "id": 3,
               "name": "address",
               "nodeType": "ElementaryTypeName",
-              "src": "546:7:0",
+              "src": "538:7:0",
               "stateMutability": "nonpayable",
               "typeDescriptions": {
                 "typeIdentifier": "t_address",
                 "typeString": "address"
               }
             },
-            "value": null,
             "visibility": "private"
           },
           {
             "body": {
-              "id": 11,
+              "id": 12,
               "nodeType": "Block",
-              "src": "596:35:0",
+              "src": "588:35:0",
               "statements": [
                 {
                   "expression": {
-                    "argumentTypes": null,
-                    "id": 9,
+                    "id": 10,
                     "isConstant": false,
                     "isLValue": false,
                     "isPure": false,
                     "lValueRequested": false,
                     "leftHandSide": {
-                      "argumentTypes": null,
-                      "id": 6,
+                      "id": 7,
                       "name": "owner",
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
-                      "referencedDeclaration": 3,
-                      "src": "606:5:0",
+                      "referencedDeclaration": 4,
+                      "src": "598:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
@@ -109,289 +115,258 @@
                     "nodeType": "Assignment",
                     "operator": "=",
                     "rightHandSide": {
-                      "argumentTypes": null,
                       "expression": {
-                        "argumentTypes": null,
-                        "id": 7,
+                        "id": 8,
                         "name": "msg",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 506,
-                        "src": "614:3:0",
+                        "referencedDeclaration": 4294967281,
+                        "src": "606:3:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_message",
                           "typeString": "msg"
                         }
                       },
-                      "id": 8,
+                      "id": 9,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
                       "lValueRequested": false,
                       "memberName": "sender",
                       "nodeType": "MemberAccess",
-                      "referencedDeclaration": null,
-                      "src": "614:10:0",
+                      "src": "606:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_address_payable",
-                        "typeString": "address payable"
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
                       }
                     },
-                    "src": "606:18:0",
+                    "src": "598:18:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
                       "typeString": "address"
                     }
                   },
-                  "id": 10,
+                  "id": 11,
                   "nodeType": "ExpressionStatement",
-                  "src": "606:18:0"
+                  "src": "598:18:0"
                 }
               ]
             },
-            "documentation": null,
-            "id": 12,
+            "id": 13,
             "implemented": true,
             "kind": "constructor",
             "modifiers": [],
             "name": "",
+            "nameLocation": "-1:-1:-1",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 4,
-              "nodeType": "ParameterList",
-              "parameters": [],
-              "src": "585:2:0"
-            },
-            "returnParameters": {
               "id": 5,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "596:0:0"
+              "src": "577:2:0"
             },
-            "scope": 13,
-            "src": "574:57:0",
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "588:0:0"
+            },
+            "scope": 14,
+            "src": "566:57:0",
             "stateMutability": "nonpayable",
-            "superFunction": null,
+            "virtual": false,
             "visibility": "public"
           }
         ],
-        "scope": 14,
-        "src": "517:221:0"
+        "scope": 15,
+        "src": "509:221:0"
       }
     ],
-    "src": "32:707:0"
+    "src": "33:698:0"
   },
   "legacyAST": {
-    "attributes": {
-      "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
-      "exportedSymbols": {
-        "LTSERC20": [
-          13
-        ]
-      }
+    "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LTSERC20.sol",
+    "exportedSymbols": {
+      "LTSERC20": [
+        14
+      ]
     },
-    "children": [
+    "id": 15,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
       {
-        "attributes": {
-          "literals": [
-            "solidity",
-            ">=",
-            "0.4",
-            ".22",
-            "<",
-            "0.8",
-            ".0"
-          ]
-        },
         "id": 1,
-        "name": "PragmaDirective",
-        "src": "32:32:0"
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:23:0"
       },
       {
-        "attributes": {
-          "baseContracts": [
-            null
-          ],
-          "contractDependencies": [
-            null
-          ],
-          "contractKind": "contract",
-          "documentation": "@dev Sets the values for {name} and {symbol}.\n     * The defaut value of {decimals} is 18. To select a different value for\n{decimals} you should overload it.\n     * All two of these values are immutable: they can only be set once during\nconstruction.\n     * The Liteswap token inherits from the openzeppelin project for added advantage",
-          "fullyImplemented": true,
-          "linearizedBaseContracts": [
-            13
-          ],
-          "name": "LTSERC20",
-          "scope": 14
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 2,
+          "nodeType": "StructuredDocumentation",
+          "src": "119:389:0",
+          "text": " @dev Sets the values for {name} and {symbol}.\n The defaut value of {decimals} is 18. To select a different value for\n {decimals} you should overload it.\n All two of these values are immutable: they can only be set once during\n construction.\n The Liteswap token inherits from the openzeppelin project for added advantage"
         },
-        "children": [
+        "fullyImplemented": true,
+        "id": 14,
+        "linearizedBaseContracts": [
+          14
+        ],
+        "name": "LTSERC20",
+        "nameLocation": "518:8:0",
+        "nodeType": "ContractDefinition",
+        "nodes": [
           {
-            "attributes": {
-              "constant": false,
-              "name": "owner",
-              "scope": 13,
-              "stateVariable": true,
-              "storageLocation": "default",
-              "type": "address",
-              "value": null,
-              "visibility": "private"
+            "constant": false,
+            "id": 4,
+            "mutability": "mutable",
+            "name": "owner",
+            "nameLocation": "554:5:0",
+            "nodeType": "VariableDeclaration",
+            "scope": 14,
+            "src": "538:21:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
             },
-            "children": [
-              {
-                "attributes": {
-                  "name": "address",
-                  "stateMutability": "nonpayable",
-                  "type": "address"
-                },
-                "id": 2,
-                "name": "ElementaryTypeName",
-                "src": "546:7:0"
+            "typeName": {
+              "id": 3,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "538:7:0",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
               }
-            ],
-            "id": 3,
-            "name": "VariableDeclaration",
-            "src": "546:21:0"
+            },
+            "visibility": "private"
           },
           {
-            "attributes": {
-              "documentation": null,
-              "implemented": true,
-              "isConstructor": true,
-              "kind": "constructor",
-              "modifiers": [
-                null
-              ],
-              "name": "",
-              "scope": 13,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "public"
-            },
-            "children": [
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 4,
-                "name": "ParameterList",
-                "src": "585:2:0"
-              },
-              {
-                "attributes": {
-                  "parameters": [
-                    null
-                  ]
-                },
-                "children": [],
-                "id": 5,
-                "name": "ParameterList",
-                "src": "596:0:0"
-              },
-              {
-                "children": [
-                  {
-                    "children": [
-                      {
-                        "attributes": {
-                          "argumentTypes": null,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "operator": "=",
-                          "type": "address"
-                        },
-                        "children": [
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "overloadedDeclarations": [
-                                null
-                              ],
-                              "referencedDeclaration": 3,
-                              "type": "address",
-                              "value": "owner"
-                            },
-                            "id": 6,
-                            "name": "Identifier",
-                            "src": "606:5:0"
-                          },
-                          {
-                            "attributes": {
-                              "argumentTypes": null,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "member_name": "sender",
-                              "referencedDeclaration": null,
-                              "type": "address payable"
-                            },
-                            "children": [
-                              {
-                                "attributes": {
-                                  "argumentTypes": null,
-                                  "overloadedDeclarations": [
-                                    null
-                                  ],
-                                  "referencedDeclaration": 506,
-                                  "type": "msg",
-                                  "value": "msg"
-                                },
-                                "id": 7,
-                                "name": "Identifier",
-                                "src": "614:3:0"
-                              }
-                            ],
-                            "id": 8,
-                            "name": "MemberAccess",
-                            "src": "614:10:0"
-                          }
-                        ],
-                        "id": 9,
-                        "name": "Assignment",
-                        "src": "606:18:0"
-                      }
-                    ],
+            "body": {
+              "id": 12,
+              "nodeType": "Block",
+              "src": "588:35:0",
+              "statements": [
+                {
+                  "expression": {
                     "id": 10,
-                    "name": "ExpressionStatement",
-                    "src": "606:18:0"
-                  }
-                ],
-                "id": 11,
-                "name": "Block",
-                "src": "596:35:0"
-              }
-            ],
-            "id": 12,
-            "name": "FunctionDefinition",
-            "src": "574:57:0"
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 7,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 4,
+                      "src": "598:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "expression": {
+                        "id": 8,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 4294967281,
+                        "src": "606:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 9,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "src": "606:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "598:18:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 11,
+                  "nodeType": "ExpressionStatement",
+                  "src": "598:18:0"
+                }
+              ]
+            },
+            "id": 13,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 5,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "577:2:0"
+            },
+            "returnParameters": {
+              "id": 6,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "588:0:0"
+            },
+            "scope": 14,
+            "src": "566:57:0",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
           }
         ],
-        "id": 13,
-        "name": "ContractDefinition",
-        "src": "517:221:0"
+        "scope": 15,
+        "src": "509:221:0"
       }
     ],
-    "id": 14,
-    "name": "SourceUnit",
-    "src": "32:707:0"
+    "src": "33:698:0"
   },
   "compiler": {
     "name": "solc",
-    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-17T06:02:44.055Z",
+  "updatedAt": "2021-04-17T15:24:23.262Z",
   "devdoc": {
-    "details": "Sets the values for {name} and {symbol}.     * The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it.     * All two of these values are immutable: they can only be set once during construction.     * The Liteswap token inherits from the openzeppelin project for added advantage",
-    "methods": {}
+    "details": "Sets the values for {name} and {symbol}. The defaut value of {decimals} is 18. To select a different value for {decimals} you should overload it. All two of these values are immutable: they can only be set once during construction. The Liteswap token inherits from the openzeppelin project for added advantage",
+    "kind": "dev",
+    "methods": {},
+    "version": 1
   },
   "userdoc": {
-    "methods": {}
+    "kind": "user",
+    "methods": {},
+    "version": 1
   }
 }

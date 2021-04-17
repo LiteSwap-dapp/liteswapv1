@@ -1,5 +1,5 @@
-var LiteSwapDAO = artifacts.require("./LiteSwapDAO.sol");
+var LiteSwapDAOFactory = artifacts.require("./LiteSwapDAOFactory.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(LiteSwapDAO);
+  deployer.deploy(LiteSwapDAOFactory);
 };

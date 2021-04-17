@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LiteSwapDAOContract from "./contracts/LiteSwapDAO.json";
+import LiteSwapDAOFactoryContract from "./contracts/LiteSwapDAOFactory.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
@@ -28,9 +28,9 @@ const App = () => {
    
          // Get the contract instance.
          const networkId = await web3.eth.net.getId();
-         const deployedNetwork = LiteSwapDAOContract.networks[networkId];
+         const deployedNetwork = LiteSwapDAOFactoryContract.networks[networkId];
          const contract = new web3.eth.Contract(
-          LiteSwapDAOContract.abi,
+          LiteSwapDAOFactoryContract.abi,
            deployedNetwork && deployedNetwork.address,
          );
    
@@ -78,7 +78,8 @@ const App = () => {
           /> : viewChange === "swap"?
           <LTSSwap /> : viewChange === "pool" ?
           <CardDao contract={contract} 
-          accounts ={accounts}/> : viewChange === "stake" ?
+          accounts ={accounts}
+          web3 ={web3}/> : viewChange === "stake" ?
           <Stake /> : ""}
         </React.Fragment>
    
