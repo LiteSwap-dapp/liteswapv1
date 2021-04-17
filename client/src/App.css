@@ -4,8 +4,15 @@ body{
   padding: 0;
   margin: 0;
 }
-a{
+li a{
   color: #6806a1;
+  text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 0.2em;
+}
+
+li a:hover{
+  color: #fc2b6d;
 }
 .container-lts{
   margin: 0;
@@ -40,6 +47,15 @@ main{
   height: 90%;
 }
 
+.main-other{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
+}
+
 .menu{
   display: flex;
   align-items: center;
@@ -49,6 +65,7 @@ main{
   font-size: 1em;
   padding-left: 0.5rem;
   font-weight: bolder;
+  
 }
 
 .wallet{
@@ -77,9 +94,30 @@ button{
 	letter-spacing: 0.2em;
 	overflow: hidden;
 	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
-  z-index: -2;
+  /* z-index: -2; */
   background-image: linear-gradient(to right, #fc2b6d, #6806a1);
+  cursor: pointer;
 }
+
+.button-dao{
+  cursor: pointer;
+  position: relative;
+  right: 1.5rem;
+	height: 50px;
+	width: 100%;
+	border: 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right,#6806a1, #6806a1);
+  color: #fff;
+
+}
+
 
 
 
@@ -122,6 +160,9 @@ footer{
   left: 0;
   right: 0;
   height: 100px;
+  z-index:3;
+  text-align: center;
+  color:#fff !important;
 }
 
 @media(max-width:450px){

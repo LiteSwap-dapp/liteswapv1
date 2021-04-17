@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import LiteSwapv1Contract from "./contracts/LiteSwapV1.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
-import Connection from  "./Connection.js";
-import Home from  "./components/Home.js";
-import Swapping from  "./components/LTSSwap.js";
-import Cooperative from  "./components/CardDao.js";
+import Connection from  "./Connection";
+import Home from  "./components/Home";
+import LTSSwap from  "./components/LTSSwap";
+import CardDao from  "./components/CardDao";
+import Stake from  "./components/Stake";
 
 const App = () => {
 
   const [web3, setWeb3]= useState(undefined);
   const [accounts, setAccounts]= useState(undefined);
   const [contract, setContract]= useState(undefined);
+  const [viewChange, setView] = useState("home")
 
   useEffect(()=> {
 
@@ -51,40 +52,34 @@ const App = () => {
           <h1>LiteSwap</h1>
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link active" href="/" aria-current="page" href="#"></a>
+                <a class="nav-link active" onClick={()=>setView("home")} aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/swap">Swap</a>
+                <a class="nav-link" onClick={()=>setView("swap")} href="#" >Swap</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/cooperative">Pool</a>
+                <a class="nav-link" onClick={() =>setView("pool")} href="#" >Pool</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="#" tabIndex="-1" aria-disabled="true">Stake</a>
+                <a class="nav-link " onClick={ ()=>setView("stake")}  tabIndex="-1" aria-disabled="true" href="#">Stake</a>
               </li>
             </ul>
           </div>
-       
+          <div className="wallet">
           <Connection />
-        
+          </div>
         </header>
-        <BrowserRouter>
-        <Switch>
-        <Route path="/">
-            <Home/>
-          </Route>
-          <Route path="/swap">
-            <Swapping/>
-          </Route>
-          <Route path="/cooperative">
-            <Cooperative/>
-          </Route>
-        </Switch>
-            
-        </BrowserRouter>
+        <div className="divider"></div>
+        <React.Fragment>
+          {viewChange === "home" ? 
+          <Home /> : viewChange === "swap"?
+          <LTSSwap /> : viewChange === "pool" ?
+          <CardDao contract={contract} /> : viewChange === "stake" ?
+          <Stake /> : ""}
+        </React.Fragment>
    
         <footer>
-          kdfkemefpf
+        <p class="card-text"><small class="text-muted"></small><small> LiteSwap is sponsored by Binance Africa Master Class 2012 All Right Reserved</small></p>
         </footer>
       </div>
     );

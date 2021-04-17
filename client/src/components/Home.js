@@ -3,7 +3,7 @@ import React from "react";
 const Home = ()=> {
     return(
         <main>
-          <div className="divider"></div>
+   
         <div className="main-wrapper">
         <div class="card mb-3" style={{maxWidth: "540px"}}>
   <div class="row g-0">

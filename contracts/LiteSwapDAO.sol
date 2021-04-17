@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.21 <0.8.0;
+pragma solidity ^0.8.0;
 
 import "./interfaces/ILiteSwapDAO.sol";
 import "./LTSERC20.sol";
@@ -26,11 +26,14 @@ contract LiteSwapDAO is LTSERC20{
 
     address[] liteSwapGroupId;
 
+
+    string[] allGroupNames;
+
     mapping(address => LiteSwapGroup) public liteSwapGroupMap;
 
     event LTSGroupCreated(address groupAddress);
 
-    constructor() public {
+    constructor() public{
         owner = msg.sender;
         _balances[address(this)] = groundAccountBalance;
     }
@@ -45,6 +48,7 @@ contract LiteSwapDAO is LTSERC20{
          liteSwapGroupMap[groupAddress]._groupIndex = liteSwapGroupId.length - 1;
 
          liteSwapGroupId.push(groupAddress);
+         allGroupNames.push(gName);
 
          emit LTSGroupCreated(groupAddress);
          
@@ -94,6 +98,7 @@ contract LiteSwapDAO is LTSERC20{
 
             _balances[msg.sender] -= amount;
             _balances[groupAddr] += amount;
+            liteSwapGroupMap[groupAddr].groupBalance = _balances[groupAddr];
 
             
         }
