@@ -33,9 +33,9 @@ contract LiteSwapDAO is LTSERC20{
 
     event LTSGroupCreated(address groupAddress);
 
-    constructor() public{
+    constructor() LTSERC20() public{
         owner = msg.sender;
-        _balances[address(this)] = groundAccountBalance;
+        balances(address(this)) = groundAccountBalance;
     }
 
     //add members to group
@@ -96,9 +96,9 @@ contract LiteSwapDAO is LTSERC20{
         //  require(member.balance <= amount, "No Sufficient Fund!");
         //  require((member == address(0)), "No Valid Account Found");
 
-            _balances[msg.sender] -= amount;
-            _balances[groupAddr] += amount;
-            liteSwapGroupMap[groupAddr].groupBalance = _balances[groupAddr];
+            balances(msg.sender) -= amount;
+            balances(groupAddr) += amount;
+            liteSwapGroupMap[groupAddr].groupBalance = balances(groupAddr);
 
             
         }

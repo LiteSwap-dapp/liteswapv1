@@ -74,7 +74,7 @@ main{
 
 }
 .card{
-  box-shadow: 0px 14px 20px rgb(49, 2, 61) !important;
+  box-shadow: 0px 14px 20px #000 !important;
   width: 600px !important;
   height:auto;
   border-radius: 2em !important;
@@ -87,6 +87,29 @@ button{
   right: 1.5rem;
 	height: 50px;
 	width: 280px;
+	border: 0 !important;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right, rgb(92, 91, 91), #222);
+  /* background-image: linear-gradient(to right, #fc2b6d, #222); */
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 0 4px 20px 0 rgba(152, 160, 180, 10);
+  background-image: linear-gradient(to right, rgb(122, 122, 122), #222);
+}
+
+.button-header{
+  position: absolute;
+  right: 1.5rem;
+	height: 50px;
+  width: 280px;
 	border: 0;
 	border-radius: 5px;
 	text-transform: uppercase;
@@ -95,9 +118,17 @@ button{
 	overflow: hidden;
 	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
   /* z-index: -2; */
-  background-image: linear-gradient(to right, #fc2b6d, #6806a1);
+  background-image: linear-gradient(to right, #b1204e, #fc2b6d);
+  /* background-image: linear-gradient(to right, #fc2b6d, #222); */
   cursor: pointer;
 }
+
+.button-header:hover{
+  box-shadow: 0 4px 20px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right, #660625, #fc2b6d);
+}
+
 
 .button-dao{
   cursor: pointer;
@@ -113,7 +144,7 @@ button{
 	overflow: hidden;
 	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
   /* z-index: -2; */
-  background-image: linear-gradient(to right,#6806a1, #6806a1);
+  background-image: linear-gradient(to right,#222, #222) !important;
   color: #fff;
 
 }
@@ -149,7 +180,7 @@ button{
   width: 100vw;
   height: 50%;
   z-index: 2;
-  background: #6806a1;
+  background: rgb(32, 32, 32);
   position: absolute;
   bottom: 0;
 }

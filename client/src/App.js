@@ -72,7 +72,9 @@ const App = () => {
         <div className="divider"></div>
         <React.Fragment>
           {viewChange === "home" ? 
-          <Home /> : viewChange === "swap"?
+          <Home 
+          setView={setView}
+          /> : viewChange === "swap"?
           <LTSSwap /> : viewChange === "pool" ?
           <CardDao contract={contract} /> : viewChange === "stake" ?
           <Stake /> : ""}

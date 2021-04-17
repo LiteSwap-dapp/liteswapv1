@@ -15,15 +15,19 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
      *
      * The Liteswap token inherits from the openzeppelin project for added advantage
      */
-contract LTSERC20 is ERC20{
+contract LTSERC20 is ERC20("LITESWAPTOKEN", "LTS") {
     
     address private owner;
 
-    constructor() ERC20("LITESWAPTOKEN", "LTS") public  {
+    constructor() public  {
         owner = msg.sender;
     }
 
     function mintLTS(uint256 amount) public virtual {
         _mint(owner, amount);
+    }
+
+    function balances(address _addr) public {
+        _balances[_addr];
     }
 }

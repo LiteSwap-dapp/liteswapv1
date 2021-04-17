@@ -10,7 +10,7 @@ function Connection() {
 
     return(     
    
-      <button type="button" onClick={connectWallet} class="btn btn-primary">Connect Wallet</button>
+      <button type="button" onClick={connectWallet} class="btn btn-primary button-header">Connect Wallet</button>
 
       // <a type="button" onClick={connectWallet} class="btn btn-primary">Connect Wallet</a>
   
