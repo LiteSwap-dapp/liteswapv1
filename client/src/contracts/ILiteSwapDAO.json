@@ -68,11 +68,6 @@
       "inputs": [
         {
           "internalType": "address payable",
-          "name": "member",
-          "type": "address"
-        },
-        {
-          "internalType": "address",
           "name": "groupAddr",
           "type": "address"
         },
@@ -183,36 +178,36 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"member\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"groupAddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"addLiquidityToLTSGroupAccount\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"member\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"groupInitialDues\",\"type\":\"uint256\"}],\"name\":\"addMembersToLTSGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"group_addr\",\"type\":\"address\"}],\"name\":\"checkIfMemberAlreadyExist\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"groupName\",\"type\":\"string\"}],\"name\":\"createLTSGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getGroupCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"totalAmount\",\"type\":\"uint256\"}],\"name\":\"getLTSGroupTotalLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"memberToremove\",\"type\":\"address\"}],\"name\":\"removeAmemberFromGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"authorised\",\"type\":\"address\"}],\"name\":\"withdrawFundFromLTSGroupAccount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"addLiquidityToLTSGroupAccount(address,address,uint256)\":{\"details\":\"Add funds to the group\"},\"addMembersToLTSGroup(address,uint256)\":{\"details\":\"Add memebers who selected group to group\"},\"checkIfMemberAlreadyExist(address)\":{\"details\":\"check If Member Already Exist\"},\"createLTSGroup(string)\":{\"details\":\"create initial liquidity group by name.\"},\"getGroupCount()\":{\"details\":\"remove member from group\"},\"getLTSGroupTotalLiquidity(uint256)\":{\"details\":\"get group total suppy\"},\"removeAmemberFromGroup(address)\":{\"details\":\"remove member from group\"},\"withdrawFundFromLTSGroupAccount(uint256,address)\":{\"details\":\"allow group to aprove withdraw\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol\":\"ILiteSwapDAO\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol\":{\"keccak256\":\"0x6e209cb36a500a069784c2d4dd5beacff69bde0322fe57f1e526e494ec183db7\",\"urls\":[\"bzz-raw://f78e230a40923ef5c049d5e3f81965aeee1218a8c0d97e130db60e216cbde035\",\"dweb:/ipfs/QmdBYW68zSHE3v2b7C9cefL5m56CggxEVSg9D2zs1eKku7\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"groupAddr\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"addLiquidityToLTSGroupAccount\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address payable\",\"name\":\"member\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"groupInitialDues\",\"type\":\"uint256\"}],\"name\":\"addMembersToLTSGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"group_addr\",\"type\":\"address\"}],\"name\":\"checkIfMemberAlreadyExist\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"groupName\",\"type\":\"string\"}],\"name\":\"createLTSGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getGroupCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"totalAmount\",\"type\":\"uint256\"}],\"name\":\"getLTSGroupTotalLiquidity\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"memberToremove\",\"type\":\"address\"}],\"name\":\"removeAmemberFromGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"authorised\",\"type\":\"address\"}],\"name\":\"withdrawFundFromLTSGroupAccount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"addLiquidityToLTSGroupAccount(address,uint256)\":{\"details\":\"Add funds to the group\"},\"addMembersToLTSGroup(address,uint256)\":{\"details\":\"Add memebers who selected group to group\"},\"checkIfMemberAlreadyExist(address)\":{\"details\":\"check If Member Already Exist\"},\"createLTSGroup(string)\":{\"details\":\"create initial liquidity group by name.\"},\"getGroupCount()\":{\"details\":\"remove member from group\"},\"getLTSGroupTotalLiquidity(uint256)\":{\"details\":\"get group total suppy\"},\"removeAmemberFromGroup(address)\":{\"details\":\"remove member from group\"},\"withdrawFundFromLTSGroupAccount(uint256,address)\":{\"details\":\"allow group to aprove withdraw\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol\":\"ILiteSwapDAO\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol\":{\"keccak256\":\"0x5e42ae11e64da7913e74bc1058aae71c412059dc9ca6ddf5fcd1f8f79d2737af\",\"urls\":[\"bzz-raw://cc3bc0ac8f7408d871b1324ac28c4a28f1dc2ec66327695fa265330804be5202\",\"dweb:/ipfs/QmTsqx1ZB5yaHhpQYWXgcJFwQZ6Mvw8SeDL14jHgA1rmV6\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.8.0;\n\ninterface ILiteSwapDAO {\n\n\n    \n    /**\n     * @dev create initial liquidity group by name.\n     \n     */\n    function createLTSGroup(string calldata  groupName) external;\n\n        \n    /**\n     * @dev Add memebers who selected group to group\n     */\n\n    function addMembersToLTSGroup(address payable member, uint256 groupInitialDues) external returns(bool);\n\n      /**\n     * @dev check If Member Already Exist\n     */\n\n    function checkIfMemberAlreadyExist(address group_addr) external returns(bool);\n\n          \n    /**\n     * @dev Add funds to the group\n     */\n    \n\n    function addLiquidityToLTSGroupAccount(address payable member, address groupAddr, uint256 amount) external returns (bool, uint256);\n          \n    /**\n     * @dev get group total suppy\n     */\n\n    function getLTSGroupTotalLiquidity(uint256 totalAmount) external view returns (uint);\n\n          \n    /**\n     * @dev allow group to aprove withdraw\n     */\n\n    function withdrawFundFromLTSGroupAccount(uint256 amount, address authorised) external returns (uint256);\n\n          \n    /**\n     * @dev remove member from group\n     */\n\n    function removeAmemberFromGroup(address memberToremove) external returns (bool);\n\n\n  /**\n     * @dev remove member from group\n     */\n     function getGroupCount() external view returns (uint256);\n}",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.22 <0.8.0;\n\ninterface ILiteSwapDAO {\n\n\n    \n    /**\n     * @dev create initial liquidity group by name.\n     \n     */\n    function createLTSGroup(string calldata  groupName) external;\n\n        \n    /**\n     * @dev Add memebers who selected group to group\n     */\n\n    function addMembersToLTSGroup(address payable member, uint256 groupInitialDues) external returns(bool);\n\n      /**\n     * @dev check If Member Already Exist\n     */\n\n    function checkIfMemberAlreadyExist(address group_addr) external returns(bool);\n\n          \n    /**\n     * @dev Add funds to the group\n     */\n    \n\n    function addLiquidityToLTSGroupAccount(address payable groupAddr, uint256 amount) external returns (bool, uint256);\n          \n    /**\n     * @dev get group total suppy\n     */\n\n    function getLTSGroupTotalLiquidity(uint256 totalAmount) external view returns (uint);\n\n          \n    /**\n     * @dev allow group to aprove withdraw\n     */\n\n    function withdrawFundFromLTSGroupAccount(uint256 amount, address authorised) external returns (uint256);\n\n          \n    /**\n     * @dev remove member from group\n     */\n\n    function removeAmemberFromGroup(address memberToremove) external returns (bool);\n\n\n  /**\n     * @dev remove member from group\n     */\n     function getGroupCount() external view returns (uint256);\n}",
   "sourcePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol",
   "ast": {
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol",
     "exportedSymbols": {
       "ILiteSwapDAO": [
-        299
+        310
       ]
     },
-    "id": 300,
+    "id": 311,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 236,
+        "id": 249,
         "literals": [
           "solidity",
           ">=",
           "0.4",
-          ".21",
+          ".22",
           "<",
           "0.8",
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "32:32:2"
+        "src": "32:32:5"
       },
       {
         "baseContracts": [],
@@ -220,9 +215,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 299,
+        "id": 310,
         "linearizedBaseContracts": [
-          299
+          310
         ],
         "name": "ILiteSwapDAO",
         "nodeType": "ContractDefinition",
@@ -230,23 +225,23 @@
           {
             "body": null,
             "documentation": "@dev create initial liquidity group by name.",
-            "id": 241,
+            "id": 254,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "createLTSGroup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 239,
+              "id": 252,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 238,
+                  "id": 251,
                   "name": "groupName",
                   "nodeType": "VariableDeclaration",
-                  "scope": 241,
-                  "src": "200:26:2",
+                  "scope": 254,
+                  "src": "200:26:5",
                   "stateVariable": false,
                   "storageLocation": "calldata",
                   "typeDescriptions": {
@@ -254,10 +249,10 @@
                     "typeString": "string"
                   },
                   "typeName": {
-                    "id": 237,
+                    "id": 250,
                     "name": "string",
                     "nodeType": "ElementaryTypeName",
-                    "src": "200:6:2",
+                    "src": "200:6:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_string_storage_ptr",
                       "typeString": "string"
@@ -267,16 +262,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "199:28:2"
+              "src": "199:28:5"
             },
             "returnParameters": {
-              "id": 240,
+              "id": 253,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "236:0:2"
+              "src": "236:0:5"
             },
-            "scope": 299,
-            "src": "176:61:2",
+            "scope": 310,
+            "src": "176:61:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -284,23 +279,23 @@
           {
             "body": null,
             "documentation": "@dev Add memebers who selected group to group",
-            "id": 250,
+            "id": 263,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addMembersToLTSGroup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 246,
+              "id": 259,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 243,
+                  "id": 256,
                   "name": "member",
                   "nodeType": "VariableDeclaration",
-                  "scope": 250,
-                  "src": "352:22:2",
+                  "scope": 263,
+                  "src": "352:22:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -308,10 +303,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 242,
+                    "id": 255,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "352:15:2",
+                    "src": "352:15:5",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -323,11 +318,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 245,
+                  "id": 258,
                   "name": "groupInitialDues",
                   "nodeType": "VariableDeclaration",
-                  "scope": 250,
-                  "src": "376:24:2",
+                  "scope": 263,
+                  "src": "376:24:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -335,10 +330,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 244,
+                    "id": 257,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "376:7:2",
+                    "src": "376:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -348,19 +343,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "351:50:2"
+              "src": "351:50:5"
             },
             "returnParameters": {
-              "id": 249,
+              "id": 262,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 248,
+                  "id": 261,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 250,
-                  "src": "419:4:2",
+                  "scope": 263,
+                  "src": "419:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -368,10 +363,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 247,
+                    "id": 260,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "419:4:2",
+                    "src": "419:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -381,10 +376,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "418:6:2"
+              "src": "418:6:5"
             },
-            "scope": 299,
-            "src": "322:103:2",
+            "scope": 310,
+            "src": "322:103:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -392,23 +387,23 @@
           {
             "body": null,
             "documentation": "@dev check If Member Already Exist",
-            "id": 257,
+            "id": 270,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "checkIfMemberAlreadyExist",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 253,
+              "id": 266,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 252,
+                  "id": 265,
                   "name": "group_addr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 257,
-                  "src": "527:18:2",
+                  "scope": 270,
+                  "src": "527:18:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -416,10 +411,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 251,
+                    "id": 264,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "527:7:2",
+                    "src": "527:7:5",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -430,19 +425,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "526:20:2"
+              "src": "526:20:5"
             },
             "returnParameters": {
-              "id": 256,
+              "id": 269,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 255,
+                  "id": 268,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 257,
-                  "src": "564:4:2",
+                  "scope": 270,
+                  "src": "564:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -450,10 +445,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 254,
+                    "id": 267,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "564:4:2",
+                    "src": "564:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -463,10 +458,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "563:6:2"
+              "src": "563:6:5"
             },
-            "scope": 299,
-            "src": "492:78:2",
+            "scope": 310,
+            "src": "492:78:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -474,23 +469,23 @@
           {
             "body": null,
             "documentation": "@dev Add funds to the group",
-            "id": 270,
+            "id": 281,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "addLiquidityToLTSGroupAccount",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 264,
+              "id": 275,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 259,
-                  "name": "member",
+                  "id": 272,
+                  "name": "groupAddr",
                   "nodeType": "VariableDeclaration",
-                  "scope": 270,
-                  "src": "683:22:2",
+                  "scope": 281,
+                  "src": "683:25:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -498,10 +493,10 @@
                     "typeString": "address payable"
                   },
                   "typeName": {
-                    "id": 258,
+                    "id": 271,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "683:15:2",
+                    "src": "683:15:5",
                     "stateMutability": "payable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address_payable",
@@ -513,38 +508,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 261,
-                  "name": "groupAddr",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 270,
-                  "src": "707:17:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 260,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "707:7:2",
-                    "stateMutability": "nonpayable",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 263,
+                  "id": 274,
                   "name": "amount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 270,
-                  "src": "726:14:2",
+                  "scope": 281,
+                  "src": "710:14:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -552,10 +520,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 262,
+                    "id": 273,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "726:7:2",
+                    "src": "710:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -565,19 +533,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "682:59:2"
+              "src": "682:43:5"
             },
             "returnParameters": {
-              "id": 269,
+              "id": 280,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 266,
+                  "id": 277,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 270,
-                  "src": "760:4:2",
+                  "scope": 281,
+                  "src": "744:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -585,10 +553,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 265,
+                    "id": 276,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "760:4:2",
+                    "src": "744:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -599,140 +567,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 268,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 270,
-                  "src": "766:7:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 267,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "766:7:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "759:15:2"
-            },
-            "scope": 299,
-            "src": "644:131:2",
-            "stateMutability": "nonpayable",
-            "superFunction": null,
-            "visibility": "external"
-          },
-          {
-            "body": null,
-            "documentation": "@dev get group total suppy",
-            "id": 277,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "getLTSGroupTotalLiquidity",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 273,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 272,
-                  "name": "totalAmount",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 277,
-                  "src": "877:19:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 271,
-                    "name": "uint256",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "877:7:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "876:21:2"
-            },
-            "returnParameters": {
-              "id": 276,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
-                  "id": 275,
-                  "name": "",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 277,
-                  "src": "921:4:2",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 274,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "921:4:2",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "src": "920:6:2"
-            },
-            "scope": 299,
-            "src": "842:85:2",
-            "stateMutability": "view",
-            "superFunction": null,
-            "visibility": "external"
-          },
-          {
-            "body": null,
-            "documentation": "@dev allow group to aprove withdraw",
-            "id": 286,
-            "implemented": false,
-            "kind": "function",
-            "modifiers": [],
-            "name": "withdrawFundFromLTSGroupAccount",
-            "nodeType": "FunctionDefinition",
-            "parameters": {
-              "id": 282,
-              "nodeType": "ParameterList",
-              "parameters": [
-                {
-                  "constant": false,
                   "id": 279,
-                  "name": "amount",
+                  "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 286,
-                  "src": "1045:14:2",
+                  "scope": 281,
+                  "src": "750:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -743,7 +582,136 @@
                     "id": 278,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1045:7:2",
+                    "src": "750:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "743:15:5"
+            },
+            "scope": 310,
+            "src": "644:115:5",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev get group total suppy",
+            "id": 288,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getLTSGroupTotalLiquidity",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 284,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 283,
+                  "name": "totalAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 288,
+                  "src": "861:19:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 282,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "861:7:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "860:21:5"
+            },
+            "returnParameters": {
+              "id": 287,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 286,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 288,
+                  "src": "905:4:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 285,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:4:5",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "904:6:5"
+            },
+            "scope": 310,
+            "src": "826:85:5",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": "@dev allow group to aprove withdraw",
+            "id": 297,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "withdrawFundFromLTSGroupAccount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 293,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 290,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 297,
+                  "src": "1029:14:5",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 289,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1029:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -754,11 +722,11 @@
                 },
                 {
                   "constant": false,
-                  "id": 281,
+                  "id": 292,
                   "name": "authorised",
                   "nodeType": "VariableDeclaration",
-                  "scope": 286,
-                  "src": "1061:18:2",
+                  "scope": 297,
+                  "src": "1045:18:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -766,10 +734,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 280,
+                    "id": 291,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1061:7:2",
+                    "src": "1045:7:5",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -780,19 +748,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1044:36:2"
+              "src": "1028:36:5"
             },
             "returnParameters": {
-              "id": 285,
+              "id": 296,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 284,
+                  "id": 295,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 286,
-                  "src": "1099:7:2",
+                  "scope": 297,
+                  "src": "1083:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -800,10 +768,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 283,
+                    "id": 294,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1099:7:2",
+                    "src": "1083:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -813,10 +781,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1098:9:2"
+              "src": "1082:9:5"
             },
-            "scope": 299,
-            "src": "1004:104:2",
+            "scope": 310,
+            "src": "988:104:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -824,23 +792,23 @@
           {
             "body": null,
             "documentation": "@dev remove member from group",
-            "id": 293,
+            "id": 304,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "removeAmemberFromGroup",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 289,
+              "id": 300,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 288,
+                  "id": 299,
                   "name": "memberToremove",
                   "nodeType": "VariableDeclaration",
-                  "scope": 293,
-                  "src": "1211:22:2",
+                  "scope": 304,
+                  "src": "1195:22:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -848,10 +816,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 287,
+                    "id": 298,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1211:7:2",
+                    "src": "1195:7:5",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -862,19 +830,19 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1210:24:2"
+              "src": "1194:24:5"
             },
             "returnParameters": {
-              "id": 292,
+              "id": 303,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 291,
+                  "id": 302,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 293,
-                  "src": "1253:4:2",
+                  "scope": 304,
+                  "src": "1237:4:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -882,10 +850,10 @@
                     "typeString": "bool"
                   },
                   "typeName": {
-                    "id": 290,
+                    "id": 301,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1253:4:2",
+                    "src": "1237:4:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -895,10 +863,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1252:6:2"
+              "src": "1236:6:5"
             },
-            "scope": 299,
-            "src": "1179:80:2",
+            "scope": 310,
+            "src": "1163:80:5",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -906,29 +874,29 @@
           {
             "body": null,
             "documentation": "@dev remove member from group",
-            "id": 298,
+            "id": 309,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "getGroupCount",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 294,
+              "id": 305,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "1340:2:2"
+              "src": "1324:2:5"
             },
             "returnParameters": {
-              "id": 297,
+              "id": 308,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 296,
+                  "id": 307,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 298,
-                  "src": "1366:7:2",
+                  "scope": 309,
+                  "src": "1350:7:5",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -936,10 +904,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 295,
+                    "id": 306,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1366:7:2",
+                    "src": "1350:7:5",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -949,27 +917,27 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1365:9:2"
+              "src": "1349:9:5"
             },
-            "scope": 299,
-            "src": "1318:57:2",
+            "scope": 310,
+            "src": "1302:57:5",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 300,
-        "src": "66:1311:2"
+        "scope": 311,
+        "src": "66:1295:5"
       }
     ],
-    "src": "32:1345:2"
+    "src": "32:1329:5"
   },
   "legacyAST": {
     "attributes": {
       "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwapDAO.sol",
       "exportedSymbols": {
         "ILiteSwapDAO": [
-          299
+          310
         ]
       }
     },
@@ -980,15 +948,15 @@
             "solidity",
             ">=",
             "0.4",
-            ".21",
+            ".22",
             "<",
             "0.8",
             ".0"
           ]
         },
-        "id": 236,
+        "id": 249,
         "name": "PragmaDirective",
-        "src": "32:32:2"
+        "src": "32:32:5"
       },
       {
         "attributes": {
@@ -1002,10 +970,10 @@
           "documentation": null,
           "fullyImplemented": false,
           "linearizedBaseContracts": [
-            299
+            310
           ],
           "name": "ILiteSwapDAO",
-          "scope": 300
+          "scope": 311
         },
         "children": [
           {
@@ -1019,7 +987,7 @@
                 null
               ],
               "name": "createLTSGroup",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1031,7 +999,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "groupName",
-                      "scope": 241,
+                      "scope": 254,
                       "stateVariable": false,
                       "storageLocation": "calldata",
                       "type": "string",
@@ -1044,19 +1012,19 @@
                           "name": "string",
                           "type": "string"
                         },
-                        "id": 237,
+                        "id": 250,
                         "name": "ElementaryTypeName",
-                        "src": "200:6:2"
+                        "src": "200:6:5"
                       }
                     ],
-                    "id": 238,
+                    "id": 251,
                     "name": "VariableDeclaration",
-                    "src": "200:26:2"
+                    "src": "200:26:5"
                   }
                 ],
-                "id": 239,
+                "id": 252,
                 "name": "ParameterList",
-                "src": "199:28:2"
+                "src": "199:28:5"
               },
               {
                 "attributes": {
@@ -1065,14 +1033,14 @@
                   ]
                 },
                 "children": [],
-                "id": 240,
+                "id": 253,
                 "name": "ParameterList",
-                "src": "236:0:2"
+                "src": "236:0:5"
               }
             ],
-            "id": 241,
+            "id": 254,
             "name": "FunctionDefinition",
-            "src": "176:61:2"
+            "src": "176:61:5"
           },
           {
             "attributes": {
@@ -1085,7 +1053,7 @@
                 null
               ],
               "name": "addMembersToLTSGroup",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1097,7 +1065,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "member",
-                      "scope": 250,
+                      "scope": 263,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1111,20 +1079,20 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 242,
+                        "id": 255,
                         "name": "ElementaryTypeName",
-                        "src": "352:15:2"
+                        "src": "352:15:5"
                       }
                     ],
-                    "id": 243,
+                    "id": 256,
                     "name": "VariableDeclaration",
-                    "src": "352:22:2"
+                    "src": "352:22:5"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "groupInitialDues",
-                      "scope": 250,
+                      "scope": 263,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1137,19 +1105,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 244,
+                        "id": 257,
                         "name": "ElementaryTypeName",
-                        "src": "376:7:2"
+                        "src": "376:7:5"
                       }
                     ],
-                    "id": 245,
+                    "id": 258,
                     "name": "VariableDeclaration",
-                    "src": "376:24:2"
+                    "src": "376:24:5"
                   }
                 ],
-                "id": 246,
+                "id": 259,
                 "name": "ParameterList",
-                "src": "351:50:2"
+                "src": "351:50:5"
               },
               {
                 "children": [
@@ -1157,7 +1125,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 250,
+                      "scope": 263,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1170,24 +1138,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 247,
+                        "id": 260,
                         "name": "ElementaryTypeName",
-                        "src": "419:4:2"
+                        "src": "419:4:5"
                       }
                     ],
-                    "id": 248,
+                    "id": 261,
                     "name": "VariableDeclaration",
-                    "src": "419:4:2"
+                    "src": "419:4:5"
                   }
                 ],
-                "id": 249,
+                "id": 262,
                 "name": "ParameterList",
-                "src": "418:6:2"
+                "src": "418:6:5"
               }
             ],
-            "id": 250,
+            "id": 263,
             "name": "FunctionDefinition",
-            "src": "322:103:2"
+            "src": "322:103:5"
           },
           {
             "attributes": {
@@ -1200,7 +1168,7 @@
                 null
               ],
               "name": "checkIfMemberAlreadyExist",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1212,7 +1180,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "group_addr",
-                      "scope": 257,
+                      "scope": 270,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1226,19 +1194,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 251,
+                        "id": 264,
                         "name": "ElementaryTypeName",
-                        "src": "527:7:2"
+                        "src": "527:7:5"
                       }
                     ],
-                    "id": 252,
+                    "id": 265,
                     "name": "VariableDeclaration",
-                    "src": "527:18:2"
+                    "src": "527:18:5"
                   }
                 ],
-                "id": 253,
+                "id": 266,
                 "name": "ParameterList",
-                "src": "526:20:2"
+                "src": "526:20:5"
               },
               {
                 "children": [
@@ -1246,7 +1214,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 257,
+                      "scope": 270,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1259,24 +1227,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 254,
+                        "id": 267,
                         "name": "ElementaryTypeName",
-                        "src": "564:4:2"
+                        "src": "564:4:5"
                       }
                     ],
-                    "id": 255,
+                    "id": 268,
                     "name": "VariableDeclaration",
-                    "src": "564:4:2"
+                    "src": "564:4:5"
                   }
                 ],
-                "id": 256,
+                "id": 269,
                 "name": "ParameterList",
-                "src": "563:6:2"
+                "src": "563:6:5"
               }
             ],
-            "id": 257,
+            "id": 270,
             "name": "FunctionDefinition",
-            "src": "492:78:2"
+            "src": "492:78:5"
           },
           {
             "attributes": {
@@ -1289,7 +1257,7 @@
                 null
               ],
               "name": "addLiquidityToLTSGroupAccount",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1300,8 +1268,8 @@
                   {
                     "attributes": {
                       "constant": false,
-                      "name": "member",
-                      "scope": 270,
+                      "name": "groupAddr",
+                      "scope": 281,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address payable",
@@ -1315,47 +1283,20 @@
                           "stateMutability": "payable",
                           "type": "address payable"
                         },
-                        "id": 258,
+                        "id": 271,
                         "name": "ElementaryTypeName",
-                        "src": "683:15:2"
+                        "src": "683:15:5"
                       }
                     ],
-                    "id": 259,
+                    "id": 272,
                     "name": "VariableDeclaration",
-                    "src": "683:22:2"
-                  },
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "groupAddr",
-                      "scope": 270,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "address",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "address",
-                          "stateMutability": "nonpayable",
-                          "type": "address"
-                        },
-                        "id": 260,
-                        "name": "ElementaryTypeName",
-                        "src": "707:7:2"
-                      }
-                    ],
-                    "id": 261,
-                    "name": "VariableDeclaration",
-                    "src": "707:17:2"
+                    "src": "683:25:5"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "amount",
-                      "scope": 270,
+                      "scope": 281,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1368,19 +1309,19 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 262,
+                        "id": 273,
                         "name": "ElementaryTypeName",
-                        "src": "726:7:2"
+                        "src": "710:7:5"
                       }
                     ],
-                    "id": 263,
+                    "id": 274,
                     "name": "VariableDeclaration",
-                    "src": "726:14:2"
+                    "src": "710:14:5"
                   }
                 ],
-                "id": 264,
+                "id": 275,
                 "name": "ParameterList",
-                "src": "682:59:2"
+                "src": "682:43:5"
               },
               {
                 "children": [
@@ -1388,7 +1329,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 270,
+                      "scope": 281,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1401,163 +1342,20 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 265,
+                        "id": 276,
                         "name": "ElementaryTypeName",
-                        "src": "760:4:2"
+                        "src": "744:4:5"
                       }
                     ],
-                    "id": 266,
+                    "id": 277,
                     "name": "VariableDeclaration",
-                    "src": "760:4:2"
+                    "src": "744:4:5"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 270,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 267,
-                        "name": "ElementaryTypeName",
-                        "src": "766:7:2"
-                      }
-                    ],
-                    "id": 268,
-                    "name": "VariableDeclaration",
-                    "src": "766:7:2"
-                  }
-                ],
-                "id": 269,
-                "name": "ParameterList",
-                "src": "759:15:2"
-              }
-            ],
-            "id": 270,
-            "name": "FunctionDefinition",
-            "src": "644:131:2"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "documentation": "@dev get group total suppy",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "getLTSGroupTotalLiquidity",
-              "scope": 299,
-              "stateMutability": "view",
-              "superFunction": null,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "totalAmount",
-                      "scope": 277,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint256",
-                          "type": "uint256"
-                        },
-                        "id": 271,
-                        "name": "ElementaryTypeName",
-                        "src": "877:7:2"
-                      }
-                    ],
-                    "id": 272,
-                    "name": "VariableDeclaration",
-                    "src": "877:19:2"
-                  }
-                ],
-                "id": 273,
-                "name": "ParameterList",
-                "src": "876:21:2"
-              },
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "",
-                      "scope": 277,
-                      "stateVariable": false,
-                      "storageLocation": "default",
-                      "type": "uint256",
-                      "value": null,
-                      "visibility": "internal"
-                    },
-                    "children": [
-                      {
-                        "attributes": {
-                          "name": "uint",
-                          "type": "uint256"
-                        },
-                        "id": 274,
-                        "name": "ElementaryTypeName",
-                        "src": "921:4:2"
-                      }
-                    ],
-                    "id": 275,
-                    "name": "VariableDeclaration",
-                    "src": "921:4:2"
-                  }
-                ],
-                "id": 276,
-                "name": "ParameterList",
-                "src": "920:6:2"
-              }
-            ],
-            "id": 277,
-            "name": "FunctionDefinition",
-            "src": "842:85:2"
-          },
-          {
-            "attributes": {
-              "body": null,
-              "documentation": "@dev allow group to aprove withdraw",
-              "implemented": false,
-              "isConstructor": false,
-              "kind": "function",
-              "modifiers": [
-                null
-              ],
-              "name": "withdrawFundFromLTSGroupAccount",
-              "scope": 299,
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "external"
-            },
-            "children": [
-              {
-                "children": [
-                  {
-                    "attributes": {
-                      "constant": false,
-                      "name": "amount",
-                      "scope": 286,
+                      "scope": 281,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1572,18 +1370,161 @@
                         },
                         "id": 278,
                         "name": "ElementaryTypeName",
-                        "src": "1045:7:2"
+                        "src": "750:7:5"
                       }
                     ],
                     "id": 279,
                     "name": "VariableDeclaration",
-                    "src": "1045:14:2"
+                    "src": "750:7:5"
+                  }
+                ],
+                "id": 280,
+                "name": "ParameterList",
+                "src": "743:15:5"
+              }
+            ],
+            "id": 281,
+            "name": "FunctionDefinition",
+            "src": "644:115:5"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev get group total suppy",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getLTSGroupTotalLiquidity",
+              "scope": 310,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "totalAmount",
+                      "scope": 288,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 282,
+                        "name": "ElementaryTypeName",
+                        "src": "861:7:5"
+                      }
+                    ],
+                    "id": 283,
+                    "name": "VariableDeclaration",
+                    "src": "861:19:5"
+                  }
+                ],
+                "id": 284,
+                "name": "ParameterList",
+                "src": "860:21:5"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 288,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 285,
+                        "name": "ElementaryTypeName",
+                        "src": "905:4:5"
+                      }
+                    ],
+                    "id": 286,
+                    "name": "VariableDeclaration",
+                    "src": "905:4:5"
+                  }
+                ],
+                "id": 287,
+                "name": "ParameterList",
+                "src": "904:6:5"
+              }
+            ],
+            "id": 288,
+            "name": "FunctionDefinition",
+            "src": "826:85:5"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "documentation": "@dev allow group to aprove withdraw",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "withdrawFundFromLTSGroupAccount",
+              "scope": 310,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "amount",
+                      "scope": 297,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 289,
+                        "name": "ElementaryTypeName",
+                        "src": "1029:7:5"
+                      }
+                    ],
+                    "id": 290,
+                    "name": "VariableDeclaration",
+                    "src": "1029:14:5"
                   },
                   {
                     "attributes": {
                       "constant": false,
                       "name": "authorised",
-                      "scope": 286,
+                      "scope": 297,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1597,19 +1538,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 280,
+                        "id": 291,
                         "name": "ElementaryTypeName",
-                        "src": "1061:7:2"
+                        "src": "1045:7:5"
                       }
                     ],
-                    "id": 281,
+                    "id": 292,
                     "name": "VariableDeclaration",
-                    "src": "1061:18:2"
+                    "src": "1045:18:5"
                   }
                 ],
-                "id": 282,
+                "id": 293,
                 "name": "ParameterList",
-                "src": "1044:36:2"
+                "src": "1028:36:5"
               },
               {
                 "children": [
@@ -1617,7 +1558,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 286,
+                      "scope": 297,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1630,24 +1571,24 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 283,
+                        "id": 294,
                         "name": "ElementaryTypeName",
-                        "src": "1099:7:2"
+                        "src": "1083:7:5"
                       }
                     ],
-                    "id": 284,
+                    "id": 295,
                     "name": "VariableDeclaration",
-                    "src": "1099:7:2"
+                    "src": "1083:7:5"
                   }
                 ],
-                "id": 285,
+                "id": 296,
                 "name": "ParameterList",
-                "src": "1098:9:2"
+                "src": "1082:9:5"
               }
             ],
-            "id": 286,
+            "id": 297,
             "name": "FunctionDefinition",
-            "src": "1004:104:2"
+            "src": "988:104:5"
           },
           {
             "attributes": {
@@ -1660,7 +1601,7 @@
                 null
               ],
               "name": "removeAmemberFromGroup",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
@@ -1672,7 +1613,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "memberToremove",
-                      "scope": 293,
+                      "scope": 304,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "address",
@@ -1686,19 +1627,19 @@
                           "stateMutability": "nonpayable",
                           "type": "address"
                         },
-                        "id": 287,
+                        "id": 298,
                         "name": "ElementaryTypeName",
-                        "src": "1211:7:2"
+                        "src": "1195:7:5"
                       }
                     ],
-                    "id": 288,
+                    "id": 299,
                     "name": "VariableDeclaration",
-                    "src": "1211:22:2"
+                    "src": "1195:22:5"
                   }
                 ],
-                "id": 289,
+                "id": 300,
                 "name": "ParameterList",
-                "src": "1210:24:2"
+                "src": "1194:24:5"
               },
               {
                 "children": [
@@ -1706,7 +1647,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 293,
+                      "scope": 304,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "bool",
@@ -1719,24 +1660,24 @@
                           "name": "bool",
                           "type": "bool"
                         },
-                        "id": 290,
+                        "id": 301,
                         "name": "ElementaryTypeName",
-                        "src": "1253:4:2"
+                        "src": "1237:4:5"
                       }
                     ],
-                    "id": 291,
+                    "id": 302,
                     "name": "VariableDeclaration",
-                    "src": "1253:4:2"
+                    "src": "1237:4:5"
                   }
                 ],
-                "id": 292,
+                "id": 303,
                 "name": "ParameterList",
-                "src": "1252:6:2"
+                "src": "1236:6:5"
               }
             ],
-            "id": 293,
+            "id": 304,
             "name": "FunctionDefinition",
-            "src": "1179:80:2"
+            "src": "1163:80:5"
           },
           {
             "attributes": {
@@ -1749,7 +1690,7 @@
                 null
               ],
               "name": "getGroupCount",
-              "scope": 299,
+              "scope": 310,
               "stateMutability": "view",
               "superFunction": null,
               "visibility": "external"
@@ -1762,9 +1703,9 @@
                   ]
                 },
                 "children": [],
-                "id": 294,
+                "id": 305,
                 "name": "ParameterList",
-                "src": "1340:2:2"
+                "src": "1324:2:5"
               },
               {
                 "children": [
@@ -1772,7 +1713,7 @@
                     "attributes": {
                       "constant": false,
                       "name": "",
-                      "scope": 298,
+                      "scope": 309,
                       "stateVariable": false,
                       "storageLocation": "default",
                       "type": "uint256",
@@ -1785,34 +1726,34 @@
                           "name": "uint256",
                           "type": "uint256"
                         },
-                        "id": 295,
+                        "id": 306,
                         "name": "ElementaryTypeName",
-                        "src": "1366:7:2"
+                        "src": "1350:7:5"
                       }
                     ],
-                    "id": 296,
+                    "id": 307,
                     "name": "VariableDeclaration",
-                    "src": "1366:7:2"
+                    "src": "1350:7:5"
                   }
                 ],
-                "id": 297,
+                "id": 308,
                 "name": "ParameterList",
-                "src": "1365:9:2"
+                "src": "1349:9:5"
               }
             ],
-            "id": 298,
+            "id": 309,
             "name": "FunctionDefinition",
-            "src": "1318:57:2"
+            "src": "1302:57:5"
           }
         ],
-        "id": 299,
+        "id": 310,
         "name": "ContractDefinition",
-        "src": "66:1311:2"
+        "src": "66:1295:5"
       }
     ],
-    "id": 300,
+    "id": 311,
     "name": "SourceUnit",
-    "src": "32:1345:2"
+    "src": "32:1329:5"
   },
   "compiler": {
     "name": "solc",
@@ -1820,10 +1761,10 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-15T19:57:51.227Z",
+  "updatedAt": "2021-04-17T06:02:44.202Z",
   "devdoc": {
     "methods": {
-      "addLiquidityToLTSGroupAccount(address,address,uint256)": {
+      "addLiquidityToLTSGroupAccount(address,uint256)": {
         "details": "Add funds to the group"
       },
       "addMembersToLTSGroup(address,uint256)": {
