@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import LiteSwapv1Contract from "./contracts/LiteSwapV1.json";
+import LiteSwapDAOFactoryContract from "./contracts/LiteSwapDAOFactory.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
@@ -28,17 +28,18 @@ const App = () => {
    
          // Get the contract instance.
          const networkId = await web3.eth.net.getId();
-         const deployedNetwork = LiteSwapv1Contract.networks[networkId];
-         const instance = new web3.eth.Contract(
-           LiteSwapv1Contract.abi,
+         const deployedNetwork = LiteSwapDAOFactoryContract.networks[networkId];
+         const contract = new web3.eth.Contract(
+          LiteSwapDAOFactoryContract.abi,
            deployedNetwork && deployedNetwork.address,
          );
    
       
          setWeb3(web3)
          setAccounts(accounts)
-         setContract({contract: instance})
-    }
+         setContract(contract)
+
+       }
 
     init()
   }, []) 
@@ -76,12 +77,14 @@ const App = () => {
           setView={setView}
           /> : viewChange === "swap"?
           <LTSSwap /> : viewChange === "pool" ?
-          <CardDao contract={contract} /> : viewChange === "stake" ?
+          <CardDao contract={contract} 
+          accounts ={accounts}
+          web3 ={web3}/> : viewChange === "stake" ?
           <Stake /> : ""}
         </React.Fragment>
    
         <footer>
-        <p class="card-text"><small class="text-muted"></small><small> LiteSwap is sponsored by Binance Africa Master Class 2012 All Right Reserved</small></p>
+        <p class="card-text"><small class="text-muted"></small><small> LiteSwap is sponsored by Binance Africa Master Class 2021 All Right Reserved</small></p>
         </footer>
       </div>
     );

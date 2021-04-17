@@ -1,5 +1,9 @@
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.8.0;
+
+
+pragma experimental ABIEncoderV2;
 
 import "./interfaces/ILiteSwapDAO.sol";
 import "./LTSERC20.sol";
@@ -35,7 +39,7 @@ contract LiteSwapDAO is LTSERC20{
 
     constructor() LTSERC20() public{
         owner = msg.sender;
-        balances(address(this)) = groundAccountBalance;
+        // _balances[address(this)] = groundAccountBalance;
     }
 
     //add members to group
@@ -96,9 +100,9 @@ contract LiteSwapDAO is LTSERC20{
         //  require(member.balance <= amount, "No Sufficient Fund!");
         //  require((member == address(0)), "No Valid Account Found");
 
-            balances(msg.sender) -= amount;
-            balances(groupAddr) += amount;
-            liteSwapGroupMap[groupAddr].groupBalance = balances(groupAddr);
+            // _balances[msg.sender] -= amount;
+            // _balances[groupAddr] += amount;
+            // liteSwapGroupMap[groupAddr].groupBalance = _balances[groupAddr];
 
             
         }
@@ -109,6 +113,10 @@ contract LiteSwapDAO is LTSERC20{
 
     function getGroupCount() public view returns (uint256){
         return liteSwapGroupId.length;
+    }
+
+    function getGroupNames() public view returns (string[] memory){
+        return allGroupNames;
     }
 
     // fallback()external payable {
