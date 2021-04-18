@@ -5,16 +5,19 @@ import Form from 'react-bootstrap/Form';
 const CardDao = ({contract, accounts, web3})=> {
 
  const [show, setShow] = useState(false);
+ const [dao, setDao] = useState([])
 
 
 
 
   const handleClose = () => setShow(false);
-  const handleShow = async (e) => {
-    e.preventDefault();
+  const handleShow = () => {
     setShow(true);
-    console.log(await contract.methods.getcooperativeGroupNames().call())
-  }
+    contract.methods.getcooperativeGroupNames()
+                                          .then((list)=> {
+                                            setDao(list);
+                                          })
+  } 
 
     return(
         <main>
@@ -40,7 +43,7 @@ const CardDao = ({contract, accounts, web3})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body">
-                <button className="button-dao" onClick={handleShow}>Join a Cooperative</button>
+                <button className="button-dao" onClick={()=> handleShow()}>Join a Cooperative</button>
             
                 </div>
                 <div className="align-self-center">
@@ -66,16 +69,22 @@ const CardDao = ({contract, accounts, web3})=> {
       </div>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton >
        </Modal.Header>
-        <Modal.Body><Form>
+        <Modal.Body>
+          <Form>
   <Form.Group controlId="exampleForm.ControlInput1">
 
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Select Group to Join</Form.Label>
     <Form.Control as="select">
- 
+       {
+       dao.length === null ? "No Cooperative yet" :
+       dao.map((list) => {
+         
+         <option>{list}</option>
+       })}
    
     </Form.Control>
   </Form.Group>
