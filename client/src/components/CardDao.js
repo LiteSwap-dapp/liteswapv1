@@ -11,13 +11,10 @@ const CardDao = ({contract, accounts, web3})=> {
 
 
   const handleClose = () => setShow(false);
-  const handleShow = () => {
+  const handleShow = async (e) => {
+    e.preventDefault();
     setShow(true);
-    console.log(contract.methods.getcooperativeGroupNames().call((error)=> {
-      console.log(error)
-    }).then((res)=>{
-      console.log(res)
-    }))
+    console.log(await contract.methods.getcooperativeGroupNames().call())
   }
 
     return(
@@ -33,7 +30,7 @@ const CardDao = ({contract, accounts, web3})=> {
                 <button className="button-dao" onClick={()=> contract.methods.createCooperativeGroup("Surulere", 10).send({
                                                         from: accounts[0],
                                                         value: web3.utils.toWei( (20).toString() , 'ether'),
-                                                         gas: 30000, gasPriceInWei : 1000
+                                                         gas: 300000, gasPriceInWei : 1000
                                                          }).then(res => console.log(res)) }  data-bs-toggle="modal" data-bs-target="#joindao">Create a Cooperative</button>
                   </div>
                 <div className="align-self-center">
