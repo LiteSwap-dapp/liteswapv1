@@ -5,10 +5,10 @@ const Home = ({setView})=> {
         <main>
    
         <div className="main-wrapper">
-        <div class="card mb-3" style={{maxWidth: "540px"}}>
+        <div class="card mb-3">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="../swap-portfolio.svg" alt="..." className="img"/>
+      <img src="../swap-portfolio.svg" alt="..." className="img img-fluid"/>
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -22,10 +22,10 @@ const Home = ({setView})=> {
   </div>
 </div>
 
-      <div class="card mb-3" style={{maxWidth: "540px"}}>
+      <div class="card mb-3" >
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="../Bitcoin_P2P.svg" alt="..." className="img"/>
+      <img src="../Bitcoin_P2P.svg" alt="..." className="img img-fluid"/>
     </div>
     <div class="col-md-8">
       <div class="card-body">
@@ -39,10 +39,10 @@ const Home = ({setView})=> {
   </div>
 </div>
 
-<div class="card mb-3" style={{maxWidth: "540px"}}>
+<div class="card mb-3" >
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="../crypto_portfolio.svg" alt="..." className="img"/>
+      <img src="../crypto_portfolio.svg" alt="..." className="img img-fluid"/>
     </div>
     <div class="col-md-8">
       <div class="card-body">
