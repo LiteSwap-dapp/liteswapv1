@@ -49,20 +49,20 @@ const App = () => {
       <div className=" container-lts">
         <header className="header">
           <div className="menu">
-          <img src="2g.gif" className="liteswap-logo" />
-          <h1>LiteSwap</h1>
+          <img src="2g.gif" alt="liteswap-logo" className="liteswap-logo" />
+          <h1><a onClick={()=>setView("home")} href="#home">LiteSwap</a></h1>
             <ul class="nav">
               <li class="nav-item">
-                <a class="nav-link active" onClick={()=>setView("home")} aria-current="page" href="#">Home</a>
+                <a class="nav-link active" onClick={()=>setView("home")} aria-current="page" href="#home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onClick={()=>setView("swap")} href="#" >Swap</a>
+                <a class="nav-link" onClick={()=>setView("swap")} href="#swap" >Swap</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onClick={() =>setView("pool")} href="#" >Pool</a>
+                <a class="nav-link" onClick={() =>setView("pool")} href="#pool" >Pool</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " onClick={ ()=>setView("stake")}  tabIndex="-1" aria-disabled="true" href="#">Stake</a>
+                <a class="nav-link " onClick={ ()=>setView("stake")}  tabIndex="-1" aria-disabled="true" href="#stake">Stake</a>
               </li>
             </ul>
           </div>

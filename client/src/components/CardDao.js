@@ -1,6 +1,5 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
 const CardDao = ({contract, accounts, web3})=> {
@@ -31,7 +30,7 @@ const CardDao = ({contract, accounts, web3})=> {
                                                         from: accounts[0],
                                                         value: web3.utils.toWei( (20).toString() , 'ether'),
                                                          gas: 300000, gasPriceInWei : 1000
-                                                         }).then(res => console.log(res)) }  data-bs-toggle="modal" data-bs-target="#joindao">Create a Cooperative</button>
+                                                         }).then(res => console.log(res)) }>Create a Cooperative</button>
                   </div>
                 <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
@@ -41,7 +40,7 @@ const CardDao = ({contract, accounts, web3})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body">
-                <Button className="button-dao" onClick={handleShow}>Join a Cooperative</Button>
+                <button className="button-dao" onClick={handleShow}>Join a Cooperative</button>
             
                 </div>
                 <div className="align-self-center">
