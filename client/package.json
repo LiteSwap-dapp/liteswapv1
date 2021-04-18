@@ -17,11 +17,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "postinstall": "node ./patch-scrypt.js"
+    "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "browser":{
+    "scrypt": false
+
   },
   "browserslist": {
     "production": [
