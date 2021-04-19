@@ -1,22 +1,56 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 
 const CardDao = ({contract, accounts, web3})=> {
 
  const [show, setShow] = useState(false);
+ const [groupShow, setGroupShow] = useState(false);
+ const [getGroupName, setGroupName] = useState("");
+ const [dao, setDao] = useState([])
 
 
 
 
   const handleClose = () => setShow(false);
-  const handleShow = async (e) => {
-    e.preventDefault();
+  const handleGroupClose = () => setGroupShow(false);
+  const handleShow = () => {
     setShow(true);
-    console.log(await contract.methods.getcooperativeGroupNames().call())
+    contract.methods.getcooperativeGroupNames().call()
+                                          .then((list)=> {
+                                            setDao(list);
+                                          })
+  } 
+
+  const handleGroupCreation = (e) =>{
+   e.preventDefault();
+   try{
+       contract.methods.createCooperativeGroup(getGroupName, 10).send({
+      from: accounts[0]
+       }).then(res => console.log(res) )
+
+       handleGroupClose()
+   }
+   catch(error) {
+    console.log(error)
+   }
+
+    
+    
   }
 
+  const handleGroupInput = (e) => {
+    setGroupName(e.target.value);
+
+
+
+  }
+
+
+  const showGroupInput = () => {
+    setGroupShow(true);
+  }
     return(
         <main>
         <div className="main-other">
@@ -27,11 +61,7 @@ const CardDao = ({contract, accounts, web3})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body text-left">
-                <button className="button-dao" onClick={()=> contract.methods.createCooperativeGroup("Surulere", 10).send({
-                                                        from: accounts[0],
-                                                        value: web3.utils.toWei( (20).toString() , 'ether'),
-                                                         gas: 300000, gasPriceInWei : 1000
-                                                         }).then(res => console.log(res)) }  data-bs-toggle="modal" data-bs-target="#joindao">Create a Cooperative</button>
+                <button className="button-dao" onClick= {showGroupInput }>Create a Cooperative</button>
                   </div>
                 <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
@@ -41,7 +71,7 @@ const CardDao = ({contract, accounts, web3})=> {
             <div className="card-body">
               <div className="media d-flex">
                 <div className="media-body">
-                <Button className="button-dao" onClick={handleShow}>Join a Cooperative</Button>
+                <button className="button-dao" onClick={()=> handleShow()}>Join a Cooperative</button>
             
                 </div>
                 <div className="align-self-center">
@@ -67,19 +97,47 @@ const CardDao = ({contract, accounts, web3})=> {
       </div>
 
       <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
+        <Modal.Header closeButton >
        </Modal.Header>
-        <Modal.Body><Form>
+        <Modal.Body>
+          <Form>
   <Form.Group controlId="exampleForm.ControlInput1">
 
   </Form.Group>
   <Form.Group controlId="exampleForm.ControlSelect1">
     <Form.Label>Select Group to Join</Form.Label>
     <Form.Control as="select">
- 
+       {
+       dao.length === null ? "No Cooperative yet" :
+       dao.map((list) => {
+         return <option>{list}</option>
+       })}
    
     </Form.Control>
   </Form.Group>
+  </Form>
+  </Modal.Body>
+  
+      </Modal>
+
+      <Modal show={groupShow} onHide={handleGroupClose}>
+        <Modal.Header closeButton >
+       </Modal.Header>
+        <Modal.Body>
+          <Form >
+  <Form.Group controlId="exampleForm.ControlInput1">
+
+  </Form.Group>
+  <Form.Group controlId="exampleForm.ControlSelect1">
+    <Form.Label>Select Group to Join</Form.Label>
+    <Form.Group controlId="exampleForm.ControlInput1">
+    <Form.Label>Cooperative Name</Form.Label>
+    <Form.Control type="text" placeholder="Enter New Cooperative" onChange={handleGroupInput}/>
+  </Form.Group>
+  </Form.Group>
+  <Button variant="primary" type="submit" onClick={handleGroupCreation} >
+    Create Group
+  </Button>
   </Form>
   </Modal.Body>
   

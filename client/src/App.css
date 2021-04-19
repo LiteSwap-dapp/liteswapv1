@@ -93,9 +93,8 @@ main{
 
 button{
   position: absolute;
-  right: 1.5rem;
-	height: 50px;
-	width: 280px;
+ 	height: 50px;
+	/* width: 280px; */
 	border: 0 !important;
 	border-radius: 5px;
 	text-transform: uppercase;
@@ -107,6 +106,14 @@ button{
   background-image: linear-gradient(to right, rgb(92, 91, 91), #222);
   /* background-image: linear-gradient(to right, #fc2b6d, #222); */
   cursor: pointer;
+}
+.button-home{
+  display: flex;
+  justify-self: center;
+  position: absolute;
+  width: 280px;
+  right: 1.5rem;
+ 
 }
 
 button:hover{
@@ -233,14 +240,32 @@ footer{
     padding: 1rem;
     margin-bottom: 2.5em;
   }
+
+  .main-other{
+    padding:1rem
+  }
   .card{
    
-    width: auto !important;
-    box-shadow: 0px 4px 10px rgb(136, 134, 134) !important;
+    width: 100% !important;
+    box-shadow: 0px 4px 10px rgb(212, 212, 212) !important;
 
+
+  }
+  .media{
+    width: 245px !important;
   }
 
   button{
+    display: flex;
+    justify-self: center;
+    position: absolute;
+    /* width: 70%; */
+    right: 0;
+   
+  }
+
+
+  .button-home{
     display: flex;
     justify-self: center;
     position: absolute;
@@ -248,6 +273,28 @@ footer{
     right: 0;
    
   }
+
+
+
+  .button-dao{
+    cursor: pointer;
+    position: relative;
+    right: 1.5rem;
+    height: 50px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 0.2em;
+    overflow: hidden;
+    box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+    /* z-index: -2; */
+    background-image: linear-gradient(to right,#222, #222) !important;
+    color: #fff;
+  
+  }
+  
 
   .button-header{
     position: absolute;

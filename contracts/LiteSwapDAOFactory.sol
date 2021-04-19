@@ -5,9 +5,12 @@ pragma experimental ABIEncoderV2;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./LiteSwapDAO1.sol";
+import "@openzeppelin/contracts/utils/math/SafeMath.sol";
 
 contract LiteSwapDAOFactory is Ownable {
 
+
+  using SafeMath for uint;
 
     struct CooperativeGroup{
         address[] memberList;
@@ -25,19 +28,23 @@ contract LiteSwapDAOFactory is Ownable {
   }
 
   //create Cooperative Group
-  function createCooperativeGroup(string memory groupName, uint amount) public payable returns (LiteSwapDAO1) {
+  function createCooperativeGroup(string memory groupName, uint amount) public payable {
 
     LiteSwapDAO1 new_cooperative = new LiteSwapDAO1(groupName,  amount );
 
     address newAddr = address(new_cooperative);
 
-    cooperativeGroups.push(newAddr);
-    createdGroupNames.push(groupName);
+    address[] storage groupArr = cooperativeGroups;
+    string[] storage groupNames = createdGroupNames;
 
-    groupMapping[newAddr].memberList.push(msg.sender);
-    groupMapping[newAddr].groupIndex = cooperativeGroups.length - 1;
+    groupArr.push(newAddr);
+    groupNames.push(groupName);
 
-    return new_cooperative;
+    //groupMapping[newAddr].memberList.push(msg.sender);
+    groupMapping[newAddr].groupIndex = cooperativeGroups.length.sub(1);
+
+    cooperativeGroups = groupArr;
+    createdGroupNames = groupNames;
 
 
   }
