@@ -92,7 +92,6 @@ main{
 }
 
 button{
-  position: absolute;
  	height: 50px;
 	/* width: 280px; */
 	border: 0 !important;
@@ -108,6 +107,7 @@ button{
   cursor: pointer;
 }
 .button-home{
+  position: absolute;
   display: flex;
   justify-self: center;
   position: absolute;
@@ -216,6 +216,40 @@ footer{
   max-width: 100%;
 }
 
+.cooperative-modal{
+  height: 200px !important;
+
+}
+
+/*
+Swapping rules
+*/
+
+.swap-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ededed;
+  height: 70px;
+  border-radius:3px;
+}
+
+.swap-input input, select{
+  border: 0 !important;
+  background-color: #ededed;
+
+}
+
+.swap-input input:focus, select:focus{
+  border: 0 !important;
+  background-color: #ededed;
+
+}
+
+.swap-button{
+  width: 100%;
+  color:#fff
+}
 @media(max-width:450px){
   .nav{
     display: none !important;

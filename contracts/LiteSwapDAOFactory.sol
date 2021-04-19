@@ -22,6 +22,9 @@ contract LiteSwapDAOFactory is Ownable {
 
     string[] public createdGroupNames;
 
+    address public currentGroupAddress;
+    string public currentGroupName;
+
   /// Empty constructor
   constructor() public {
 
@@ -29,11 +32,10 @@ contract LiteSwapDAOFactory is Ownable {
 
   //create Cooperative Group
   function createCooperativeGroup(string memory groupName, uint amount) public payable {
-
     LiteSwapDAO1 new_cooperative = new LiteSwapDAO1(groupName,  amount );
 
     address newAddr = address(new_cooperative);
-
+    
     address[] storage groupArr = cooperativeGroups;
     string[] storage groupNames = createdGroupNames;
 
@@ -50,8 +52,18 @@ contract LiteSwapDAOFactory is Ownable {
   }
 
 //All users to join a cooperative group
-  function joinCooperativeGroup(address _groupAddr) public payable {
-          groupMapping[_groupAddr].memberList.push(msg.sender);
+  function joinCooperativeGroup(string memory name) public payable {
+     address addr = currentGroupAddress;
+
+     string[] memory _arr = createdGroupNames;
+
+      for(uint i = 0; i < _arr.length; i++){
+             if(createdGroupNames[i] == bytes(name) ){
+              addr =  cooperativeGroups[i];
+        }
+      }
+     groupMapping[addr].memberList.push(msg.sender);
+     currentGroupAddress = addr;
   }
 
   //allow user to payu their due to their cooperative groups
