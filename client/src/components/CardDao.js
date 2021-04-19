@@ -11,6 +11,7 @@ const CardDao = ({ contract, accounts, web3 }) => {
   const [show, setShow] = useState(false);
   const [groupShow, setGroupShow] = useState(false);
   const [getGroupName, setGroupName] = useState("");
+  const [join, setJoin] = useState("");
   const [dao, setDao] = useState([])
 
 
@@ -18,12 +19,19 @@ const CardDao = ({ contract, accounts, web3 }) => {
 
   const handleClose = () => setShow(false);
   const handleGroupClose = () => setGroupShow(false);
+
+
   const handleShow = () => {
     setShow(true);
     contract.methods.getcooperativeGroupNames().call()
-      .then((list) => {
-        setDao(list);
-      })
+    .then((list) => {
+      setDao(list);
+    })
+  }
+
+  const handleGroupJoin = (e) => {
+    setJoin(e.target.value)
+    contract.methods.joinCooperativeGroup(join).call()
   }
 
   const handleGroupCreation = (e) => {
@@ -109,7 +117,7 @@ const CardDao = ({ contract, accounts, web3 }) => {
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
               <Form.Label>Select Group to Join</Form.Label>
-              <Form.Control as="select">
+              <Form.Control as="select" onChange={handleGroupJoin}>
                 {
                   dao.length === null ? "No Cooperative yet" :
                     dao.map((list) => {

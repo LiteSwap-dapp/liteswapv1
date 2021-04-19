@@ -221,6 +221,35 @@ footer{
 
 }
 
+/*
+Swapping rules
+*/
+
+.swap-input{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ededed;
+  height: 70px;
+  border-radius:3px;
+}
+
+.swap-input input, select{
+  border: 0 !important;
+  background-color: #ededed;
+
+}
+
+.swap-input input:focus, select:focus{
+  border: 0 !important;
+  background-color: #ededed;
+
+}
+
+.swap-button{
+  width: 100%;
+  color:#fff
+}
 @media(max-width:450px){
   .nav{
     display: none !important;

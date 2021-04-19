@@ -1,40 +1,82 @@
 import React from "react";
 
-const LTSSwap = ()=> {
-    return(
-      <main>
+const LTSSwap = () => {
+  return (
+    <main>
       <div className="main-other">
-      {/* <div class="col-xl-12 col-sm-12 col-12"> */}
-      <div class="card center">
-        <div class="card-content">
-          <div class="card-body">
-            <div class="media d-flex">
-              <div class="media-body text-left">
-                <h3 class="danger">278</h3>
-                <span>New Projects</span>
-              </div>
-              <div class="align-self-center">
-                <i class="icon-rocket danger font-large-2 float-right"></i>
-              </div>
+        {/* <div class="col-xl-12 col-sm-12 col-12"> */}
+        <div className="card center">
+          <div className="card-content">
+            <div className="card-header">
+              <h3>Exchange</h3>
+              <p className="text-left">Trade tokens in an instant</p>
             </div>
-          </div>
-          <div class="card-body">
-            <div class="media d-flex">
-              <div class="media-body text-left">
-                <h3 class="danger">278</h3>
-                <span>New Projects</span>
+            <form >
+              <div className="card-body">
+                <div className="media d-flex">
+                  <div className="media-body text-left">
+                    <div className="container-fluid">
+
+
+
+                      <div className="row swap-input">
+                        <div className="col col-6 ">
+                          <label >From</label>
+                          <input type="text" placeholder="0.0" />
+
+                        </div>
+                        <div className="col col-6">
+                          <select>
+                            <option>BNB</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+
+
+
+                    </div>
+                  </div>
+                  <div className="align-self-center">
+                    <i className="icon-rocket danger font-large-2 float-right"></i>
+                  </div>
+                </div>
               </div>
-              <div class="align-self-center">
-                <i class="icon-rocket danger font-large-2 float-right"></i>
+              <div className="card-body">
+                <div className="media d-flex">
+                  <div className="media-body text-left">
+                    <div className="container-fluid">
+                      <div className="row swap-input">
+                        <div className="col col-6 ">
+                          <label >To</label>
+                          <input type="text" placeholder="0.0" />
+
+                        </div>
+                        <div className="col col-6">
+                          <select>
+                            <option>BNB</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="align-self-center">
+                    <i className="icon-rocket danger font-large-2 float-right"></i>
+                  </div>
+                </div>
               </div>
-            </div>
+              <div className="container-fluid">
+                <button type="submit" className="swap-button">Unlock Wallet</button>
+              </div>
+
+            </form>
           </div>
         </div>
+        {/* </div> */}
       </div>
-    {/* </div> */}
-    </div>
     </main>
-    );
+  );
 }
 
 export default LTSSwap;
