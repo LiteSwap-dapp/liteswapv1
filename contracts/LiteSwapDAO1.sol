@@ -51,8 +51,8 @@ contract LiteSwapDAO1 is Ownable {
   )
     public payable
   {
-    require(_groupCreationAmount > 0, "The minimum fund has to be greater than 0.");
-    require(msg.value >= _groupCreationAmount);
+    // require(_groupCreationAmount > 0, "The minimum fund has to be greater than 0.");
+    // require(msg.value >= _groupCreationAmount);
 
     groupName = _groupName;
     createdTime = block.timestamp;
@@ -63,6 +63,7 @@ contract LiteSwapDAO1 is Ownable {
     // Group creation should be called from its factory.
     groupAccountNumber = msg.sender;
     groupBalance = 0;
+    groupState = GroupState.Created;
 
     // Transfer ownership to the owner, because it defaults to msg.sender
     //   by OpenZeppelin

@@ -34,13 +34,17 @@ contract LiteSwapDAOFactory is Ownable {
 
     address newAddr = address(new_cooperative);
 
-    cooperativeGroups.push(newAddr);
-    createdGroupNames.push(groupName);
+    address[] storage groupArr = cooperativeGroups;
+    string[] storage groupNames = createdGroupNames;
 
-    groupMapping[newAddr].memberList.push(msg.sender);
+    groupArr.push(newAddr);
+    groupNames.push(groupName);
+
+    //groupMapping[newAddr].memberList.push(msg.sender);
     groupMapping[newAddr].groupIndex = cooperativeGroups.length.sub(1);
 
-    
+    cooperativeGroups = groupArr;
+    createdGroupNames = groupNames;
 
 
   }
