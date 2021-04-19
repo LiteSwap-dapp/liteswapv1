@@ -92,7 +92,6 @@ main{
 }
 
 button{
-  position: absolute;
  	height: 50px;
 	/* width: 280px; */
 	border: 0 !important;
@@ -108,6 +107,7 @@ button{
   cursor: pointer;
 }
 .button-home{
+  position: absolute;
   display: flex;
   justify-self: center;
   position: absolute;
@@ -214,6 +214,11 @@ footer{
   background: rgb(32, 32, 32);
   padding: 1rem;
   max-width: 100%;
+}
+
+.cooperative-modal{
+  height: 200px !important;
+
 }
 
 @media(max-width:450px){
