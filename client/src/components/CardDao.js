@@ -105,7 +105,7 @@ const CardDao = ({ contract, accounts, web3 }) => {
         <Modal.Body>
           <Form>
             <Form.Group controlId="exampleForm.ControlInput1">
-
+            <div class="alert alert-warning">Would you rather prefer to explore the respective groups before joining? follow this <a href="#">Explore Groups</a></div>
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
               <Form.Label>Select Group to Join</Form.Label>
@@ -135,7 +135,9 @@ const CardDao = ({ contract, accounts, web3 }) => {
 
             </Form.Group>
             <Form.Group controlId="exampleForm.ControlSelect1">
+            <div class="alert alert-warning">Note, Cooperative Group creation attracts a fee</div>
               <Form.Group controlId="exampleForm.ControlInput1">
+            
                 <Form.Label>Cooperative Name</Form.Label>
                 <Form.Control type="text" placeholder="Enter New Cooperative" onChange={handleGroupInput} />
               </Form.Group>
