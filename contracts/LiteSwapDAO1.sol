@@ -1,7 +1,6 @@
 // SPDX-License-Identifier: MIT
-
 pragma solidity ^0.8.0;
-
+pragma experimental ABIEncoderV2;
 
 
 import "@openzeppelin/contracts/access/Ownable.sol";
@@ -113,6 +112,11 @@ contract LiteSwapDAO1 is Ownable {
       }
        return groupMembers[_addr].groupMemberAddressList.length;
 
+  }
+
+  //get all cooperative names
+  function getCooperativeNames() public view returns (string[] memory){
+    return groupNames;
   }
  
 }
