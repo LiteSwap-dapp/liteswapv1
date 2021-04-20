@@ -42,7 +42,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -61,7 +62,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -74,7 +76,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -87,7 +90,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -100,7 +104,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -144,7 +149,8 @@
         }
       ],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -163,7 +169,8 @@
         }
       ],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -182,7 +189,8 @@
         }
       ],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -195,7 +203,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [],
@@ -208,7 +217,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     }
   ],
   "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"previousOwner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"OwnershipTransferred\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"cooperativeGroups\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"groupName\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"}],\"name\":\"createCooperativeGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"createdGroupNames\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentGroupAddress\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"currentGroupName\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"name\",\"type\":\"string\"}],\"name\":\"getGroupCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getcooperativeGroupNames\",\"outputs\":[{\"internalType\":\"string[]\",\"name\":\"\",\"type\":\"string[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"getcooperativeGroups\",\"outputs\":[{\"internalType\":\"address[]\",\"name\":\"\",\"type\":\"address[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"string\",\"name\":\"groupName\",\"type\":\"string\"}],\"name\":\"joinCooperativeGroup\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"payable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"renounceOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getcooperativeGroupNames()\":{\"returns\":{\"_0\":\"An array of all created Cooperative Group names contracts\"}},\"getcooperativeGroups()\":{\"returns\":{\"_0\":\"An array of all created Cooperative Group contracts\"}},\"owner()\":{\"details\":\"Returns the address of the current owner.\"},\"renounceOwnership()\":{\"details\":\"Leaves the contract without owner. It will not be possible to call `onlyOwner` functions anymore. Can only be called by the current owner. NOTE: Renouncing ownership will leave the contract without an owner, thereby removing any functionality that is only available to the owner.\"},\"transferOwnership(address)\":{\"details\":\"Transfers ownership of the contract to a new account (`newOwner`). Can only be called by the current owner.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Empty constructor\"},\"getcooperativeGroupNames()\":{\"notice\":\"Allow retrieving the the array of created group names\"},\"getcooperativeGroups()\":{\"notice\":\"Allow retrieving the the array of created contracts\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapDAOFactory.sol\":\"LiteSwapDAOFactory\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapDAO1.sol\":{\"keccak256\":\"0x8df021bbc54505adf1e462d9b0ecaf817288c8c763c210755bdd282a8e2fb77b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://769b7511917d6a12933bff1f91ea3b50372db3f5bf267cf44b6b91905c68ae0f\",\"dweb:/ipfs/QmUe6xCjjG1yJn21UMU7QFCuQzAWRYUfSrwo1g4WDqTXfi\"]},\"/home/emplug7/applications/liteswapv1/contracts/LiteSwapDAOFactory.sol\":{\"keccak256\":\"0xdf17d9c0e939e4698153e6610aa596c87ed465c8dbe8bfda9f99487b3d83efc9\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://92ed3d93c5bc085952499736f90ca07eb9a1a333f5c9b9122b61f2f0bf1062f8\",\"dweb:/ipfs/QmdA2afjUvmryXSk7Q21YZTdn321UnB2WTaMLk2cDRHaoo\"]},\"@openzeppelin/contracts/access/Ownable.sol\":{\"keccak256\":\"0x2bd824aa69addb34ffbeeebc0678314900c851faf54bbc5c277462dd2bb1c885\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e1eddf4b51aa86da1318b55236c49b49446df43ad734a7b0956558554a947635\",\"dweb:/ipfs/QmPVM2z2MtWaMRBnWrfE6PoFKxNukYGjzuZp5quxYd1mt7\"]},\"@openzeppelin/contracts/utils/Context.sol\":{\"keccak256\":\"0xf930d2df426bfcfc1f7415be724f04081c96f4fb9ec8d0e3a521c07692dface0\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fc2bfdea0d2562c76fb3c4cf70a86c6ba25c5a30e8f8515c95aafdf8383f8395\",\"dweb:/ipfs/QmTbFya18786ckJfLYUoWau9jBTKfmWnWm5XSViWvB7PXN\"]},\"@openzeppelin/contracts/utils/math/SafeMath.sol\":{\"keccak256\":\"0xcf2d788ab0637a50812ccc51cfb9e8690fcf30da0b737f7158ba35ffbe7a6403\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://a114ebe2e09c04778f06ef97c51e5af9740010bbb6fbefb8c8d7ded3e31d45eb\",\"dweb:/ipfs/QmVEYQXEFkDW9UYrAs7wJfQhEjpZCvFUf39tH1S6jyRmju\"]}},\"version\":1}",
@@ -12418,8 +12428,8 @@
         }
       },
       "links": {},
-      "address": "0x29E21448B3a38D1933324dCE8588eFfb0d4fd761",
-      "transactionHash": "0x55a9847bcf3ca628514b4c7c73f4f768d46239951795514a67f5dd0040d1315c"
+      "address": "0x3DA0ee9DB02330Cb9a60CfFbDd7F68319e676a95",
+      "transactionHash": "0xb7b27defbd8cc7a293402259dc380d5d375e8d99c680caf920bcbde3f5f5ed10"
     },
     "5777": {
       "events": {
@@ -12449,7 +12459,8 @@
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-20T13:40:51.970Z",
+  "updatedAt": "2021-04-20T13:57:06.087Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {
