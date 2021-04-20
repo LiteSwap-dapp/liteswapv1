@@ -13,67 +13,106 @@ contract LiteSwapDAO1 is Ownable {
   using SafeMath for uint;
 
     //Group Basic info
-     string public groupName;
-     address public groupCreator;
-     uint public groupBalance;
-     address[] public groupMemberAddress;
 
-     address public groupAccountNumber;
+    address _owner = owner();
+
+    struct GroupDetails {
+     bytes32 id;
+     string  groupName;
+     address groupCreator;
+     address[] groupMemberAddressList;
+     uint  groupBalance;
      uint groupCreationAmount;  
+     uint groupIndex;
+     uint createdTime;
+     GroupState groupState;
+    }
+  
 
-     uint public createdTime;
-
-     enum GroupState{ Created, Updated, Deleted }
+     enum GroupState {Created, Updated, Deleted}
 
      GroupState public groupState;
 
      mapping(address => uint) public membersContributions;
 
-     address[] public members;
+     mapping(bytes32 => GroupDetails) public groupMembers;
 
-     event MemberJoined( address indexed member);
+     bytes32[] private groupIds;
+     string[] public groupNames;
+     address[] public groupMemberList;
 
-     event MemberAddedFund ( address indexed member);
+     event GroupCreated(address indexed addr, string groupName);
 
-      modifier memberHasContributed(address sender) {
-    require(membersContributions[sender] > 0);
-    _;
+     event MemberJoined(address indexed member, bool joined);
+
+     event MemberAddedFund(address indexed member);
+
+  //     modifier memberHasContributed(address sender) {
+  //   require(membersContributions[sender] > 0);
+  //   _;
+  // }
+
+  constructor() public {
+    _owner = msg.sender;
   }
 
-    /// Create a new LotteryPot contract
+      /// Create a new Cooperative Group contract
   /// @param _groupName - Name of the Cooperative
-  /// @param _groupCreationAmount - The minimum stake required to create a group
+  /// @param amount - The minimum stake required to create a group
 
-  constructor (
-    string memory _groupName,
-    uint _groupCreationAmount
+      function createCooperativeGroup(string memory _groupName, uint amount) public payable returns(bool success) {
+        require(bytes(_groupName).length > 0, "The groupname's name cannot be empty!");
+        
+        bytes32 blockHash = blockhash(block.number - 1);
+        bytes32 id = keccak256(abi.encodePacked(msg.sender, _groupName, block.timestamp, blockHash));
 
-  )
-    public payable
-  {
-    // require(_groupCreationAmount > 0, "The minimum fund has to be greater than 0.");
-    // require(msg.value >= _groupCreationAmount);
 
-    groupName = _groupName;
-    createdTime = block.timestamp;
-    groupBalance = 0;
-    groupCreator = msg.sender;
-    groupCreationAmount = _groupCreationAmount;
+        groupIds.push(id);
+        groupNames.push(_groupName);
+    
+  
+        groupMembers[id].id = id;
+        groupMembers[id].groupName = _groupName;
+        groupMembers[id].groupCreator = _owner;
+        groupMembers[id].groupMemberAddressList.push(msg.sender);
+        groupMembers[id].groupCreationAmount = amount;
+        groupMembers[id].groupIndex = groupIds.length - 1;
+        groupMembers[id].createdTime = block.timestamp;
+        groupMembers[id].groupState = GroupState.Created;
 
-    // Group creation should be called from its factory.
-    groupAccountNumber = msg.sender;
-    groupBalance = 0;
-    groupState = GroupState.Created;
+        emit GroupCreated(address(this), _groupName);
+        
+        return true;
+    }
 
-    // Transfer ownership to the owner, because it defaults to msg.sender
-    //   by OpenZeppelin
-    // if (_groupCreator!= msg.sender) {
-    //   transferOwnership(_owner);
-    // }
+    //add a member to the group
+
+    function addMember(string memory groupName) public payable returns(bool) {      
+       bytes32 _addr = 0x00;
+      for(uint i = 0; i < groupNames.length; i++ ){
+        if(keccak256(abi.encodePacked(groupNames[i])) == keccak256(abi.encodePacked(groupName))){
+           _addr =  groupIds[i];
+        }
+      }
+       groupMembers[_addr].groupMemberAddressList.push(msg.sender);
+
+       emit MemberJoined(msg.sender, true);
+
+       return true;
+      
+    }
+
+  //get all members count belonging to a group
+
+  function getAllGroupMembersCount(string memory groupName) public view returns (uint256) {
+        bytes32 _addr = 0x00;
+      for(uint i = 0; i < groupNames.length; i++ ){
+        if(keccak256(abi.encodePacked(groupNames[i])) == keccak256(abi.encodePacked(groupName))){
+           _addr =  groupIds[i];
+        }
+      }
+       return groupMembers[_addr].groupMemberAddressList.length;
+
   }
-
-  //allow members to contribute
-  function contribute(uint amount) public {
-    groupBalance.add(amount);
-  }
+ 
 }

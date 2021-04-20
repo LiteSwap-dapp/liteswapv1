@@ -17,6 +17,8 @@ contract LiteSwapDAOFactory is Ownable {
         uint groupIndex;
     }
 
+    LiteSwapDAO1 new_cooperative;
+
     mapping(address => CooperativeGroup) groupMapping;
     address[] public cooperativeGroups;
 
@@ -27,49 +29,24 @@ contract LiteSwapDAOFactory is Ownable {
 
   /// Empty constructor
   constructor() public {
-
+    new_cooperative = new LiteSwapDAO1();
   }
 
   //create Cooperative Group
-  function createCooperativeGroup(string memory groupName, uint amount) public payable {
-    LiteSwapDAO1 new_cooperative = new LiteSwapDAO1(groupName,  amount );
-
-    address newAddr = address(new_cooperative);
-    
-    address[] storage groupArr = cooperativeGroups;
-    string[] storage groupNames = createdGroupNames;
-
-    groupArr.push(newAddr);
-    groupNames.push(groupName);
-
-    //groupMapping[newAddr].memberList.push(msg.sender);
-    groupMapping[newAddr].groupIndex = cooperativeGroups.length.sub(1);
-
-    cooperativeGroups = groupArr;
-    createdGroupNames = groupNames;
-
+  function createCooperativeGroup(string memory groupName, uint amount) public payable returns (bool) {
+       new_cooperative.createCooperativeGroup(groupName, amount );
 
   }
 
 //All users to join a cooperative group
-  function joinCooperativeGroup(string memory name) public payable {
-     address addr = currentGroupAddress;
-
-     string[] memory _arr = createdGroupNames;
-
-      for(uint i = 0; i < _arr.length; i++){
-             if(createdGroupNames[i] == bytes(name) ){
-              addr =  cooperativeGroups[i];
-        }
-      }
-     groupMapping[addr].memberList.push(msg.sender);
-     currentGroupAddress = addr;
+  function joinCooperativeGroup(string memory groupName) public payable returns (bool) {
+    new_cooperative.addMember(groupName);
   }
 
-  //allow user to payu their due to their cooperative groups
-  function payYourGroupDues(uint dues, string memory groupName) public {
-    LiteSwapDAO1 groupInstance = new LiteSwapDAO1(groupName, dues);
-    groupInstance.contribute(dues);
+  //get group members count
+
+  function getGroupCount(string memory name) public payable returns (uint){
+          new_cooperative.getAllGroupMembersCount(name);
   }
 
     /// Allow retrieving the the array of created contracts
