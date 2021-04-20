@@ -58,7 +58,7 @@ contract LiteSwapDAOFactory is Ownable {
       /// Allow retrieving the the array of created group names
   /// @return An array of all created Cooperative Group names contracts
   function getcooperativeGroupNames() public view returns (string[] memory) {
-    return createdGroupNames;
+    return  new_cooperative.getCooperativeNames();
   }
 
 }
