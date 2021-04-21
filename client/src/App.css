@@ -88,6 +88,10 @@ main{
   width: 570px !important;
   height:auto;
 }
+.card-home h2{
+  /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */
+font-size:1.5em;
+}
 
 .card-swap{
   /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */

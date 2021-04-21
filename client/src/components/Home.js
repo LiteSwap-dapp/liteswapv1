@@ -12,7 +12,7 @@ const Home = ({setView})=> {
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h2 class="card-title">Group Pool</h2>
+        <h2 class="card-title">Cooperative Savings</h2>
         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
         <button type="button" className="button-home" onClick={ ()=>setView("pool")}  class="btn btn-primary card-button button-home card-text">Pool
         <div className="fill-one"></div>
