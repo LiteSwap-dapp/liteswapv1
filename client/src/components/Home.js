@@ -5,7 +5,7 @@ const Home = ({setView})=> {
         <main>
    
         <div className="main-wrapper">
-        <div class="card mb-3">
+        <div class="card card-home mb-3">
   <div class="row g-0">
     <div class="col-md-4">
       <img src="../swap-portfolio.svg" alt="..." className="img img-fluid"/>
@@ -22,7 +22,7 @@ const Home = ({setView})=> {
   </div>
 </div>
 
-      <div class="card mb-3" >
+      <div class="card card-home mb-3" >
   <div class="row g-0">
     <div class="col-md-4">
       <img src="../Bitcoin_P2P.svg" alt="..." className="img img-fluid"/>
@@ -39,7 +39,7 @@ const Home = ({setView})=> {
   </div>
 </div>
 
-<div class="card mb-3" >
+<div class="card card-home mb-3" >
   <div class="row g-0">
     <div class="col-md-4">
       <img src="../crypto_portfolio.svg" alt="..." className="img img-fluid"/>

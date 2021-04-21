@@ -12,10 +12,6 @@ contract LiteSwapDAOFactory is Ownable {
 
   using SafeMath for uint;
 
-    struct CooperativeGroup{
-        address[] memberList;
-        uint groupIndex;
-    }
 
     LiteSwapDAO1 new_cooperative;
 
@@ -29,7 +25,7 @@ contract LiteSwapDAOFactory is Ownable {
 
   /// Empty constructor
   constructor() public {
-    new_cooperative = new LiteSwapDAO1();
+    new_cooperative = new LiteSwapDAO1(msg.sender);
   }
 
   //create Cooperative Group

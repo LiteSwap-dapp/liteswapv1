@@ -5,7 +5,7 @@ const Stake = ()=> {
         <main>
         <div className="main-other">
         {/* <div class="col-xl-12 col-sm-12 col-12"> */}
-        <div class="card center">
+        <div class="card card-stake center">
           <div class="card-content">
             <div class="card-body">
               <div class="media d-flex">

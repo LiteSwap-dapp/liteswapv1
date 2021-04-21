@@ -1,9 +1,12 @@
 body{
   /* background-color: #282c34; */
-  background-color: rgb(253, 251, 251);
+  /* background-color: rgb(253, 251, 251); */
+
+  background: -webkit-linear-gradient(#e3f4fb,rgb(253, 251, 251), rgb(253, 251, 251));
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 li a{
   color: #333;
@@ -27,6 +30,7 @@ li a:hover{
   height: 5rem;
   box-shadow: 1px 5px 20px #ccc;
   margin-bottom: 1rem;
+  background-color: rgb(253, 251, 251);
 }
 .liteswap-logo{
   width: 2rem;
@@ -78,9 +82,36 @@ main{
   align-items: center;
 
 }
+
+.card-home{
+  /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */
+  width: 570px !important;
+  height:auto;
+}
+
+.card-swap{
+  /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */
+  width: 500px !important;
+  height:auto;
+
+}
+
+
+.card-group{
+  /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */
+  width: 500px !important;
+  height:auto;
+
+}
+
+.card-stake{
+  /* box-shadow: 0px -10px 50px rgb(224, 224, 224) !important; */
+  width: 500px !important;
+  height:auto;
+
+}
 .card{
-  box-shadow: 0px 14px 20px #000 !important;
-  width: 600px !important;
+  box-shadow: 0px 0px 10px 0 #d9eaf3 !important;
   height:auto;
   border-radius: 2em !important;
   padding: 3rem;
@@ -101,9 +132,9 @@ button{
 	font-size: 1.1em;
 	letter-spacing: 0.2em;
 	overflow: hidden;
-	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+	box-shadow: 0 4px 5px 0 rgba(152, 160, 180, 10);
   /* z-index: -2; */
-  background-image: linear-gradient(to right, rgb(92, 91, 91), #222);
+
   /* background-image: linear-gradient(to right, #fc2b6d, #222); */
   cursor: pointer;
 }
@@ -114,6 +145,9 @@ button{
   position: absolute;
   width: 280px;
   right: 1.5rem;
+  background-image: linear-gradient(to right, #8bc9e4, #a1c3d1);
+  box-shadow: 0 2px 5px 0 rgba(152, 160, 180, 10);
+  color: #222 !important;
  
 }
 
@@ -149,20 +183,17 @@ button:hover{
 
 .button-dao{
   cursor: pointer;
-  position: relative;
-  right: 1.5rem;
 	height: 50px;
-	width: 100%;
+	width: 22.5rem;
 	border: 0;
 	border-radius: 5px;
 	text-transform: uppercase;
 	font-size: 1.1em;
 	letter-spacing: 0.2em;
 	overflow: hidden;
-	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
-  /* z-index: -2; */
-  background-image: linear-gradient(to right,#222, #222) !important;
-  color: #fff;
+  background-image: linear-gradient(to right, #8bc9e4, #a1c3d1);
+  box-shadow: 0 2px 5px 0 rgba(152, 160, 180, 10);
+  color: rgb(76, 68, 68);
 
 }
 
@@ -198,7 +229,8 @@ button:hover{
   width: 100vw;
   height: 50%;
   z-index: 2;
-  background: rgb(32, 32, 32);
+  /* background: rgb(98, 97, 97); */
+  background: -webkit-linear-gradient(rgb(253, 251, 251), rgb(253, 251, 251), #e3f4fb);
   position: absolute;
   bottom: 0;
 }
@@ -211,8 +243,8 @@ footer{
   height: 100px;
   z-index:3;
   text-align: center;
-  color:#fff !important;
-  background: rgb(32, 32, 32);
+  color:rgb(77, 75, 75) !important;
+  background: transparent;
   padding: 1rem;
   max-width: 100%;
 }
@@ -225,32 +257,79 @@ footer{
 /*
 Swapping rules
 */
-
+.card-header-swap{
+  border-radius: 0.4em !important;
+  background-color: #fff8f8 !important;
+}
 .swap-input{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #ededed;
-  height: 70px;
+  background-color: #fff8f8;
+  height: 90px;
   border-radius:3px;
+  margin-bottom: 1em;
+
+
 }
 
 .swap-input input, select{
   border: 0 !important;
-  background-color: #ededed;
+  background-color: #fff8f8;
 
 }
 
 .swap-input input:focus, select:focus{
   border: 0 !important;
-  background-color: #ededed;
+  background-color: #fff8f8;
 
 }
 
 .swap-button{
   width: 100%;
-  color:#fff
+  color:rgb(49, 44, 44);
+  border-radius: 0.4em;
+  background-image: linear-gradient(to right, #8bc9e4, #a1c3d1);
+  box-shadow: 0 2px 5px 0 rgba(152, 160, 180, 10);
+
 }
+.select-swap0{
+  background-color: rgb(228, 222, 222);
+  width: 60%;
+  position: absolute;
+  right: 1rem;
+  padding: 0.39em;
+  border-radius: 0.4em;
+  color: rgb(46, 44, 44);
+}
+.select-swap1{
+  background-color: rgb(70, 69, 69);
+  width: 60%;
+  position: absolute;
+  right: 1rem;
+  padding: 0.39em;
+  border-radius: 0.4em;
+  color: #fff;
+}
+
+.arrow-swap{
+  position: absolute;
+  z-index: 900;
+  right: 47%;
+  left: 47%;
+  top: 54%;
+  background-color: rgb(228, 222, 222);
+  width: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0.4em;
+}
+
+.swap-balance{
+  font-size: 1.2em;
+}
+
 @media(max-width:450px){
   .nav{
     display: none !important;
