@@ -59,7 +59,7 @@ const App = () => {
                 <a class="nav-link" onClick={()=>setView("swap")} href="#swap" >Swap</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" onClick={() =>setView("pool")} href="#pool" >Pool</a>
+                <a class="nav-link" onClick={() =>setView("pool")} href="#pool" >Cooperative Savings</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link " onClick={ ()=>setView("stake")}  tabIndex="-1" aria-disabled="true" href="#stake">Stake</a>
