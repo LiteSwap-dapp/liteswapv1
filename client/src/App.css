@@ -4,6 +4,7 @@ body{
   padding: 0;
   margin: 0;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 li a{
   color: #333;
@@ -79,7 +80,7 @@ main{
 
 }
 .card{
-  box-shadow: 0px 14px 20px #000 !important;
+  box-shadow: 0px 150px 130px rgb(117, 117, 117) !important;
   width: 600px !important;
   height:auto;
   border-radius: 2em !important;
@@ -198,7 +199,7 @@ button:hover{
   width: 100vw;
   height: 50%;
   z-index: 2;
-  background: rgb(32, 32, 32);
+  background: rgb(98, 97, 97);
   position: absolute;
   bottom: 0;
 }
@@ -225,32 +226,78 @@ footer{
 /*
 Swapping rules
 */
-
+.card-header-swap{
+  border-radius: 0.4em !important;
+  background-color: #fff8f8 !important;
+}
 .swap-input{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #ededed;
-  height: 70px;
+  background-color: #fff8f8;
+  height: 90px;
   border-radius:3px;
+  margin-bottom: 1em;
+
+
 }
 
 .swap-input input, select{
   border: 0 !important;
-  background-color: #ededed;
+  background-color: #fff8f8;
 
 }
 
 .swap-input input:focus, select:focus{
   border: 0 !important;
-  background-color: #ededed;
+  background-color: #fff8f8;
 
 }
 
 .swap-button{
   width: 100%;
-  color:#fff
+  color:#fff;
+  border-radius: 0.4em;
+  background-image: linear-gradient(to right, #660625, #fc2b6d);
+
 }
+.select-swap0{
+  background-color: rgb(228, 222, 222);
+  width: 60%;
+  position: absolute;
+  right: 1rem;
+  padding: 0.39em;
+  border-radius: 0.4em;
+  color: rgb(46, 44, 44);
+}
+.select-swap1{
+  background-color: rgb(70, 69, 69);
+  width: 60%;
+  position: absolute;
+  right: 1rem;
+  padding: 0.39em;
+  border-radius: 0.4em;
+  color: #fff;
+}
+
+.arrow-swap{
+  position: absolute;
+  z-index: 900;
+  right: 47.5%;
+  left: 47.5%;
+  top: 54%;
+  background-color: rgb(228, 222, 222);
+  width: auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0.4em;
+}
+
+.swap-balance{
+  font-size: 1.2em;
+}
+
 @media(max-width:450px){
   .nav{
     display: none !important;

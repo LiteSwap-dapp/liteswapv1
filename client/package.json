@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.1",
     "react": "16.11.0",
     "react-bootstrap": "^1.5.2",
     "react-dom": "16.11.0",
@@ -19,7 +20,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
- 
   },
   "eslintConfig": {
     "extends": "react-app"
