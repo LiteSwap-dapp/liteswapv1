@@ -12,10 +12,6 @@ contract LiteSwapDAOFactory is Ownable {
 
   using SafeMath for uint;
 
-    struct CooperativeGroup{
-        address[] memberList;
-        uint groupIndex;
-    }
 
     LiteSwapDAO1 new_cooperative;
 
