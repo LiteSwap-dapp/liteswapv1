@@ -66,7 +66,7 @@ const CardDao = ({ contract, accounts, web3 }) => {
     <main>
       <div className="main-other">
         {/* <div class="col-xl-12 col-sm-12 col-12"> */}
-        <div className="card">
+        <div className="card card-group">
 
           <div className="card-content">
             <div className="card-body">
@@ -74,9 +74,9 @@ const CardDao = ({ contract, accounts, web3 }) => {
                 <div className="media-body text-left">
                   <button className="button-dao" onClick={showGroupInput}>Create a Cooperative</button>
                 </div>
-                <div className="align-self-center">
+                {/* <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
-                </div>
+                </div> */}
               </div>
             </div>
             <div className="card-body">
@@ -85,9 +85,9 @@ const CardDao = ({ contract, accounts, web3 }) => {
                   <button className="button-dao" onClick={() => handleShow()}>Join a Cooperative</button>
 
                 </div>
-                <div className="align-self-center">
+                {/* <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -97,9 +97,9 @@ const CardDao = ({ contract, accounts, web3 }) => {
                   <button className="button-dao">Pay your Dues</button>
 
                 </div>
-                <div className="align-self-center">
+                {/* <div className="align-self-center">
                   <i className="icon-rocket danger font-large-2 float-right"></i>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

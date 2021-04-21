@@ -5,6 +5,7 @@ pragma experimental ABIEncoderV2;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
+import "./interfaces/ILiteswapToken.sol";
 
 contract LiteSwapDAO1 is Ownable {
 
@@ -14,6 +15,8 @@ contract LiteSwapDAO1 is Ownable {
     //Group Basic info
 
     address _owner = owner();
+
+    uint private groupVault;
 
     struct GroupDetails {
      bytes32 id;
@@ -46,21 +49,31 @@ contract LiteSwapDAO1 is Ownable {
 
      event MemberAddedFund(address indexed member);
 
+     modifier onlyCreator{
+       require(_owner == msg.sender);
+       _;
+     }
+
   //     modifier memberHasContributed(address sender) {
   //   require(membersContributions[sender] > 0);
   //   _;
   // }
 
-  constructor() public {
-    _owner = msg.sender;
+  constructor(address payable caller) public {
+    _owner = caller;
+    // ILiteswapToken ltsToken = ILiteswapToken(0x00);
+    groupVault = address(this).balance
   }
 
       /// Create a new Cooperative Group contract
   /// @param _groupName - Name of the Cooperative
   /// @param amount - The minimum stake required to create a group
 
-      function createCooperativeGroup(string memory _groupName, uint amount) public payable returns(bool success) {
+      function createCooperativeGroup(string memory _groupName, uint amount) public payable onlyCreator returns(bool success) {
         require(bytes(_groupName).length > 0, "The groupname's name cannot be empty!");
+        require(_owner.balance > 0 && _owner == address(0));
+        require(_amount > 0,"amount need to be more than 0");    
+
         
         bytes32 blockHash = blockhash(block.number - 1);
         bytes32 id = keccak256(abi.encodePacked(msg.sender, _groupName, block.timestamp, blockHash));
@@ -74,10 +87,15 @@ contract LiteSwapDAO1 is Ownable {
         groupMembers[id].groupName = _groupName;
         groupMembers[id].groupCreator = _owner;
         groupMembers[id].groupMemberAddressList.push(msg.sender);
+        groupMembers[id].groupBalance = groupVault;
         groupMembers[id].groupCreationAmount = amount;
         groupMembers[id].groupIndex = groupIds.length - 1;
         groupMembers[id].createdTime = block.timestamp;
         groupMembers[id].groupState = GroupState.Created;
+
+         ltsToken.transferFrom(_owner, address(this), _amount); 
+
+         membersContributions[_owner] += amount;
 
         emit GroupCreated(address(this), _groupName);
         
@@ -94,6 +112,8 @@ contract LiteSwapDAO1 is Ownable {
         }
       }
        groupMembers[_addr].groupMemberAddressList.push(msg.sender);
+
+       ltsToken.transferFrom(_owner, address(this), _amount); 
 
        emit MemberJoined(msg.sender, true);
 
@@ -118,5 +138,26 @@ contract LiteSwapDAO1 is Ownable {
   function getCooperativeNames() public view returns (string[] memory){
     return groupNames;
   }
+
+  //return group members contribution
+  function getMemberContributions(address member) public view returns (uint) {
+    require(getMemberAddress(member) == true)
+    return membersContributions[member];
+  }
+
+
+  //return members account address
+  function getMemberAddress(address member) public view returns (bool){
+     for(uint i = 0;  i < groupMemberList.length; i++){
+       if(keccak256(abi.encodePacked(groupMemberList[i])) == keccak256(abi.encodePacked(member))){
+         return true;
+       }
+     }
+
+     return false;
+  }
+
+  //return group total balance
+  
  
 }

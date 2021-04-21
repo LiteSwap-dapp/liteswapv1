@@ -8,7 +8,7 @@ const LTSSwap = () => {
         {/* <h1>Welcome to crypto!</h1> */}
      
         {/* <div class="col-xl-12 col-sm-12 col-12"> */}
-        <div className="card center">
+        <div className="card card-swap center">
         {/* <a>back</a> */}
           <div className="card-content">
             <div className="card-header card-header-swap">

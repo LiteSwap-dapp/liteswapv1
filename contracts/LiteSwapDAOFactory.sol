@@ -25,7 +25,7 @@ contract LiteSwapDAOFactory is Ownable {
 
   /// Empty constructor
   constructor() public {
-    new_cooperative = new LiteSwapDAO1();
+    new_cooperative = new LiteSwapDAO1(msg.sender);
   }
 
   //create Cooperative Group

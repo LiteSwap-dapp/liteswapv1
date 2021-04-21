@@ -13,6 +13,7 @@ contract TokenFarm{
     mapping(address=>uint) public stakingBalance;
     mapping(address=>bool) public hasStaked;
     mapping(address=>bool) public isStaking;
+
     address[] public staker;
 
     constructor (DaiToken _DaiToken, LiteswapToken _LiteswapToken) public{
@@ -21,7 +22,7 @@ contract TokenFarm{
         owner = msg.sender; // address of the owner of the contract
     }
     
-    // @param _amount The amount of the tokens yowant to stake.
+    // @param _amount The amount of the tokens you want to stake.
     function stakeToken(uint _amount) public {
         
         // check, amount should be greater than zero. There should be some tokens to be staked.
