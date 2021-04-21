@@ -148,9 +148,10 @@ button{
   position: absolute;
   display: flex;
   justify-self: center;
-  position: absolute;
+  align-items: center;
+  /* position: absolute; */
   width: 280px;
-  right: 1.5rem;
+  /* right: 1.5rem; */
   background-image: linear-gradient(to right, #8bc9e4, #a1c3d1);
   box-shadow: 0 2px 5px 0 rgba(152, 160, 180, 10);
   color: #222 !important;
