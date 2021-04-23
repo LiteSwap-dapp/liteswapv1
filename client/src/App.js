@@ -23,6 +23,8 @@ const App = () => {
          // Get network provider and web3 instance.
          const web3 = await getWeb3();
 
+         console.log(web3.eth.eth_chainId);
+
          // Use web3 to get the user's accounts.
          const accounts = await web3.eth.getAccounts();
    
@@ -52,9 +54,6 @@ const App = () => {
           <img src="2g.gif" alt="liteswap-logo" className="liteswap-logo" />
           <h1><a onClick={()=>setView("home")} href="#home">LiteSwap</a></h1>
             <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link active" onClick={()=>setView("home")} aria-current="page" href="#home">Home</a>
-              </li>
               <li class="nav-item">
                 <a class="nav-link" onClick={()=>setView("swap")} href="#swap" >Swap</a>
               </li>
