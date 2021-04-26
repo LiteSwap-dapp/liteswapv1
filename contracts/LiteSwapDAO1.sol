@@ -81,8 +81,6 @@ contract LiteSwapDAO1 is Ownable, LiteswapToken{
   constructor() public {
     _owner = owner();
 
-
-
   }
 
       /**
@@ -101,7 +99,7 @@ contract LiteSwapDAO1 is Ownable, LiteswapToken{
           
         require(bytes(_groupName).length > 0, "The groupname's name cannot be empty!");
         require(checkGroupAddress(_groupName) == false, "Group already exist");
-        require(balances[_owner] > 0 && _owner == address(0));
+        // require(balances[msg.sender] > 0 && msg.sender == address(0));
         require(amount > 0,"amount need to be more than 0");    
 
         
@@ -117,7 +115,7 @@ contract LiteSwapDAO1 is Ownable, LiteswapToken{
         groupMembers[id].groupName = _groupName;
         groupMembers[id].groupCreator = _owner;
         groupMembers[id].groupAddress = address(this);
-        groupMembers[id].groupMemberAddressList.push(_owner);
+        groupMembers[id].groupMemberAddressList.push(msg.sender);
         groupMembers[id].memberList[_owner] = MemberDetails(amount, MemberState.Added, block.timestamp, groupMembers[id].groupMemberAddressList.length - 1);
         groupMembers[id].groupBalance = amount;
         groupMembers[id].groupCreationAmount = amount;
