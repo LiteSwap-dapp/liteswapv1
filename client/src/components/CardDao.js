@@ -23,15 +23,24 @@ const CardDao = ({ contract, accounts, web3 }) => {
 
   const handleShow = () => {
     setShow(true);
+    try{
     contract.methods.getcooperativeGroupNames().call()
     .then((list) => {
       setDao(list);
     })
+    }catch(error){
+      console.log(error);
+    }
+
   }
 
   const handleGroupJoin = (e) => {
     setJoin(e.target.value)
-    contract.methods.joinCooperativeGroup(join).call()
+   }
+
+  const addMemberToGroup = (e) => {
+    contract.methods.joinCooperativeGroup(join).call().then(res => console.log(res))
+    handleClose();
   }
 
   const handleGroupCreation = (e) => {
@@ -126,6 +135,10 @@ const CardDao = ({ contract, accounts, web3 }) => {
 
               </Form.Control>
             </Form.Group>
+
+            <Button variant="primary" type="submit" onClick={addMemberToGroup} >
+              Join Cooperative
+  </Button>
           </Form>
         </Modal.Body>
 

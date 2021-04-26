@@ -4,7 +4,7 @@ const Home = ({setView})=> {
     return(
         <main>
    
-        <div className="main-wrapper">
+        <section className="main-wrapper">
         <div class="card card-home mb-1">
   <div class="row g-0">
     <div class="col-md-4">
@@ -53,7 +53,8 @@ const Home = ({setView})=> {
     </div>
   </div>
 </div>
-      </div>
+      </section>
+      {/* <section className="team-list"></section> */}
       </main>
     );
 }

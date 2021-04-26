@@ -15,18 +15,18 @@
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
     "exportedSymbols": {
       "ILiteSwap": [
-        544
+        1280
       ],
       "LiteSwapV1": [
-        539
+        1056
       ]
     },
-    "id": 540,
+    "id": 1057,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 535,
+        "id": 1052,
         "literals": [
           "solidity",
           "^",
@@ -39,11 +39,11 @@
       {
         "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
         "file": "./interfaces/ILiteSwap.sol",
-        "id": 536,
+        "id": 1053,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 540,
-        "sourceUnit": 545,
+        "scope": 1057,
+        "sourceUnit": 1281,
         "src": "58:36:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -53,32 +53,32 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 537,
+              "id": 1054,
               "name": "ILiteSwap",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 544,
+              "referencedDeclaration": 1280,
               "src": "119:9:5"
             },
-            "id": 538,
+            "id": 1055,
             "nodeType": "InheritanceSpecifier",
             "src": "119:9:5"
           }
         ],
         "contractDependencies": [
-          544
+          1280
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 539,
+        "id": 1056,
         "linearizedBaseContracts": [
-          539,
-          544
+          1056,
+          1280
         ],
         "name": "LiteSwapV1",
         "nameLocation": "105:10:5",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 540,
+        "scope": 1057,
         "src": "96:36:5"
       }
     ],
@@ -88,18 +88,18 @@
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/LiteSwapV1.sol",
     "exportedSymbols": {
       "ILiteSwap": [
-        544
+        1280
       ],
       "LiteSwapV1": [
-        539
+        1056
       ]
     },
-    "id": 540,
+    "id": 1057,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 535,
+        "id": 1052,
         "literals": [
           "solidity",
           "^",
@@ -112,11 +112,11 @@
       {
         "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
         "file": "./interfaces/ILiteSwap.sol",
-        "id": 536,
+        "id": 1053,
         "nameLocation": "-1:-1:-1",
         "nodeType": "ImportDirective",
-        "scope": 540,
-        "sourceUnit": 545,
+        "scope": 1057,
+        "sourceUnit": 1281,
         "src": "58:36:5",
         "symbolAliases": [],
         "unitAlias": ""
@@ -126,32 +126,32 @@
         "baseContracts": [
           {
             "baseName": {
-              "id": 537,
+              "id": 1054,
               "name": "ILiteSwap",
               "nodeType": "IdentifierPath",
-              "referencedDeclaration": 544,
+              "referencedDeclaration": 1280,
               "src": "119:9:5"
             },
-            "id": 538,
+            "id": 1055,
             "nodeType": "InheritanceSpecifier",
             "src": "119:9:5"
           }
         ],
         "contractDependencies": [
-          544
+          1280
         ],
         "contractKind": "contract",
         "fullyImplemented": true,
-        "id": 539,
+        "id": 1056,
         "linearizedBaseContracts": [
-          539,
-          544
+          1056,
+          1280
         ],
         "name": "LiteSwapV1",
         "nameLocation": "105:10:5",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 540,
+        "scope": 1057,
         "src": "96:36:5"
       }
     ],
@@ -170,8 +170,7 @@
     }
   },
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-18T14:11:22.496Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-04-24T09:39:51.675Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

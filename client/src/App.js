@@ -23,8 +23,6 @@ const App = () => {
          // Get network provider and web3 instance.
          const web3 = await getWeb3();
 
-         console.log(web3.eth.eth_chainId);
-
          // Use web3 to get the user's accounts.
          const accounts = await web3.eth.getAccounts();
    

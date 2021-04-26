@@ -15,15 +15,15 @@
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
     "exportedSymbols": {
       "ILiteSwap": [
-        544
+        1280
       ]
     },
-    "id": 545,
+    "id": 1281,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 543,
+        "id": 1279,
         "literals": [
           "solidity",
           "^",
@@ -31,7 +31,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:8"
+        "src": "33:23:9"
       },
       {
         "abstract": false,
@@ -39,33 +39,33 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 544,
+        "id": 1280,
         "linearizedBaseContracts": [
-          544
+          1280
         ],
         "name": "ILiteSwap",
-        "nameLocation": "69:9:8",
+        "nameLocation": "69:9:9",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 545,
-        "src": "58:29:8"
+        "scope": 1281,
+        "src": "58:29:9"
       }
     ],
-    "src": "33:54:8"
+    "src": "33:54:9"
   },
   "legacyAST": {
     "absolutePath": "/home/emplug7/applications/liteswapv1/contracts/interfaces/ILiteSwap.sol",
     "exportedSymbols": {
       "ILiteSwap": [
-        544
+        1280
       ]
     },
-    "id": 545,
+    "id": 1281,
     "license": "MIT",
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 543,
+        "id": 1279,
         "literals": [
           "solidity",
           "^",
@@ -73,7 +73,7 @@
           ".0"
         ],
         "nodeType": "PragmaDirective",
-        "src": "33:23:8"
+        "src": "33:23:9"
       },
       {
         "abstract": false,
@@ -81,19 +81,19 @@
         "contractDependencies": [],
         "contractKind": "interface",
         "fullyImplemented": true,
-        "id": 544,
+        "id": 1280,
         "linearizedBaseContracts": [
-          544
+          1280
         ],
         "name": "ILiteSwap",
-        "nameLocation": "69:9:8",
+        "nameLocation": "69:9:9",
         "nodeType": "ContractDefinition",
         "nodes": [],
-        "scope": 545,
-        "src": "58:29:8"
+        "scope": 1281,
+        "src": "58:29:9"
       }
     ],
-    "src": "33:54:8"
+    "src": "33:54:9"
   },
   "compiler": {
     "name": "solc",
@@ -101,7 +101,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.4",
-  "updatedAt": "2021-04-17T15:24:23.470Z",
+  "updatedAt": "2021-04-24T09:39:51.728Z",
   "devdoc": {
     "kind": "dev",
     "methods": {},

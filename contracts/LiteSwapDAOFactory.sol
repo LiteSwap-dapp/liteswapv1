@@ -6,7 +6,8 @@ pragma experimental ABIEncoderV2;
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "./LiteSwapDAO1.sol";
 import "@openzeppelin/contracts/utils/math/SafeMath.sol";
-
+import "./LiteswapToken.sol";
+import "./interfaces/ILiteswapToken.sol";
 contract LiteSwapDAOFactory is Ownable {
 
 
@@ -15,7 +16,8 @@ contract LiteSwapDAOFactory is Ownable {
 
     LiteSwapDAO1 new_cooperative;
 
-    mapping(address => CooperativeGroup) groupMapping;
+    ILiteswapToken lToken;
+
     address[] public cooperativeGroups;
 
     string[] public createdGroupNames;
@@ -25,9 +27,22 @@ contract LiteSwapDAOFactory is Ownable {
 
   /// Empty constructor
   constructor() public {
-    new_cooperative = new LiteSwapDAO1(msg.sender);
+    new_cooperative = new LiteSwapDAO1();
   }
 
+
+/***
+* distribute LTS to caller
+ */
+
+ bytes4 private constant SELECTOR = bytes4(keccak256(bytes('transfer(address,uint256)')));
+
+
+ function distribute(address token, address to, uint value) public {
+      (bool success, bytes memory data) = token.call(abi.encodeWithSelector(SELECTOR, to, value));
+        require(success && (data.length == 0 || abi.decode(data, (bool))), 'LTS: TRANSFER_FAILED');
+
+ }
   //create Cooperative Group
   function createCooperativeGroup(string memory groupName, uint amount) public payable returns (bool) {
        new_cooperative.createCooperativeGroup(groupName, amount );

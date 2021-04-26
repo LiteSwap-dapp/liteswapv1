@@ -50,7 +50,7 @@ main{
   place-items: center;
   justify-content: center;
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 .main-other{
@@ -233,9 +233,14 @@ button:hover{
 .img{
   width: 100%;
   height: auto;
+  display: flex;
+  align-items: center;
+
 
 }
-
+.team-list{
+  height: 500px;
+}
 .divider{
   width: 100vw;
   height: 50%;
@@ -410,6 +415,9 @@ Swapping rules
   .button-dao{
     cursor: pointer;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     right: 1.5rem;
     height: 50px;
     width: 100%;
@@ -421,7 +429,7 @@ Swapping rules
     overflow: hidden;
     box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
     /* z-index: -2; */
-    background-image: linear-gradient(to right,#222, #222) !important;
+    background-image: linear-gradient(to right, #8bc9e4, #a1c3d1);
     color: #fff;
   
   }
