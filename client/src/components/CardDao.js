@@ -46,8 +46,9 @@ const CardDao = ({ contract, accounts, web3 }) => {
   const handleGroupCreation = (e) => {
     e.preventDefault();
     try {
+      web3.eth.defaultAccount = accounts[0];
       contract.methods.createCooperativeGroup(getGroupName, 10).send({
-        from: accounts[0]
+        from: web3.eth.defaultAccount
       }).then(res => console.log(res))
 
       handleGroupClose()
