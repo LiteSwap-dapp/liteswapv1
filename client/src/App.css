@@ -1,22 +1,215 @@
-.App {
-  text-align: center;
+body{
+  /* background-color: #282c34; */
+  background-color: rgb(253, 251, 251);
+  padding: 0;
+  margin: 0;
+}
+li a{
+  color: #6806a1;
+  text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 0.2em;
 }
 
-.App-logo {
-  height: 40vmin;
+li a:hover{
+  color: #fc2b6d;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.container-lts{
+  margin: 0;
+  width: 100vw !important;
+  height: 100vh;
+}
+.header{
+  display: grid;
+  grid-template-columns:50% 50%;
+  grid-template-rows: 100%;
+  height: 5rem;
+  box-shadow: 1px 5px 20px #ccc;
+  margin-bottom: 1rem;
+}
+.liteswap-logo{
+  width: 2rem;
+}
+main{
+  display: grid;
+  place-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 90%;
+  overflow-x: hidden;
+}
+.main-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
 }
 
-.App-link {
-  color: #09d3ac;
+.main-other{
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 90%;
 }
+
+.menu{
+  display: flex;
+  align-items: center;
+  padding-left:3rem;
+}
+.menu h1{
+  font-size: 1em;
+  padding-left: 0.5rem;
+  font-weight: bolder;
+  
+}
+
+.wallet{
+  display: flex;
+  align-items: center;
+
+}
+.card{
+  box-shadow: 0px 14px 20px #000 !important;
+  width: 600px !important;
+  height:auto;
+  border-radius: 2em !important;
+  padding: 3rem;
+  z-index: 3;
+}
+
+button{
+  position: absolute;
+  right: 1.5rem;
+	height: 50px;
+	width: 280px;
+	border: 0 !important;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right, rgb(92, 91, 91), #222);
+  /* background-image: linear-gradient(to right, #fc2b6d, #222); */
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 0 4px 20px 0 rgba(152, 160, 180, 10);
+  background-image: linear-gradient(to right, rgb(122, 122, 122), #222);
+}
+
+.button-header{
+  position: absolute;
+  right: 1.5rem;
+	height: 50px;
+  width: 280px;
+	border: 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right, #b1204e, #fc2b6d);
+  /* background-image: linear-gradient(to right, #fc2b6d, #222); */
+  cursor: pointer;
+}
+
+.button-header:hover{
+  box-shadow: 0 4px 20px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right, #660625, #fc2b6d);
+}
+
+
+.button-dao{
+  cursor: pointer;
+  position: relative;
+  right: 1.5rem;
+	height: 50px;
+	width: 100%;
+	border: 0;
+	border-radius: 5px;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	letter-spacing: 0.2em;
+	overflow: hidden;
+	box-shadow: 0 4px 12px 0 rgba(152, 160, 180, 10);
+  /* z-index: -2; */
+  background-image: linear-gradient(to right,#222, #222) !important;
+  color: #fff;
+
+}
+
+
+
+
+.card-button{
+  position: absolute;
+  left:0;
+  margin-left: 2em;
+}
+
+.cardWrapper{
+  display: grid;
+  grid-template-columns: 30% 1fr;
+}
+.imgWrapper{
+  display: grid;
+  place-items: center;
+  height: 100%;
+}
+.imgWrapper img {
+  width: 100%;
+}
+
+.img{
+  width: 100%;
+
+}
+
+.divider{
+  width: 100vw;
+  height: 50%;
+  z-index: 2;
+  background: rgb(32, 32, 32);
+  position: absolute;
+  bottom: 0;
+}
+
+footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index:3;
+  text-align: center;
+  color:#fff !important;
+}
+
+@media(max-width:450px){
+  .cardWrapper{
+    display: grid;
+    grid-template-columns: 30% 1fr;
+  }
+
+  .main-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+    place-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+}
+

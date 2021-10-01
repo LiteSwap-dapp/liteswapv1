@@ -1,73 +1,92 @@
-import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import React, { useState, useEffect } from "react";
+import LiteSwapv1Contract from "./contracts/LiteSwapV1.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
-class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+import Connection from  "./Connection";
+import Home from  "./components/Home";
+import LTSSwap from  "./components/LTSSwap";
+import CardDao from  "./components/CardDao";
+import Stake from  "./components/Stake";
 
-  componentDidMount = async () => {
-    try {
-      // Get network provider and web3 instance.
-      const web3 = await getWeb3();
+const App = () => {
 
-      // Use web3 to get the user's accounts.
-      const accounts = await web3.eth.getAccounts();
+  const [web3, setWeb3]= useState(undefined);
+  const [accounts, setAccounts]= useState(undefined);
+  const [contract, setContract]= useState(undefined);
+  const [viewChange, setView] = useState("home")
 
-      // Get the contract instance.
-      const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
-      const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
-        deployedNetwork && deployedNetwork.address,
-      );
+  useEffect(()=> {
 
-      // Set web3, accounts, and contract to the state, and then proceed with an
-      // example of interacting with the contract's methods.
-      this.setState({ web3, accounts, contract: instance }, this.runExample);
-    } catch (error) {
-      // Catch any errors for any of the above operations.
-      alert(
-        `Failed to load web3, accounts, or contract. Check console for details.`,
-      );
-      console.error(error);
+    const init = async ()=> {
+         // Get network provider and web3 instance.
+         const web3 = await getWeb3();
+
+         // Use web3 to get the user's accounts.
+         const accounts = await web3.eth.getAccounts();
+   
+         // Get the contract instance.
+         const networkId = await web3.eth.net.getId();
+         const deployedNetwork = LiteSwapv1Contract.networks[networkId];
+         const instance = new web3.eth.Contract(
+           LiteSwapv1Contract.abi,
+           deployedNetwork && deployedNetwork.address,
+         );
+   
+      
+         setWeb3(web3)
+         setAccounts(accounts)
+         setContract({contract: instance})
     }
-  };
 
-  runExample = async () => {
-    const { accounts, contract } = this.state;
+    init()
+  }, []) 
+    
 
-    // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
-
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
-
-    // Update state with the result.
-    this.setState({ storageValue: response });
-  };
-
-  render() {
-    if (!this.state.web3) {
-      return <div>Loading Web3, accounts, and contract...</div>;
-    }
     return (
-      <div className="App">
-        <h1>Good to Go!</h1>
-        <p>Your Truffle Box is installed and ready.</p>
-        <h2>Smart Contract Example</h2>
-        <p>
-          If your contracts compiled and migrated successfully, below will show
-          a stored value of 5 (by default).
-        </p>
-        <p>
-          Try changing the value stored on <strong>line 40</strong> of App.js.
-        </p>
-        <div>The stored value is: {this.state.storageValue}</div>
+      <div className=" container-lts">
+        <header className="header">
+          <div className="menu">
+          <img src="2g.gif" className="liteswap-logo" />
+          <h1>LiteSwap</h1>
+            <ul class="nav">
+              <li class="nav-item">
+                <a class="nav-link active" onClick={()=>setView("home")} aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onClick={()=>setView("swap")} href="#" >Swap</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" onClick={() =>setView("pool")} href="#" >Pool</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " onClick={ ()=>setView("stake")}  tabIndex="-1" aria-disabled="true" href="#">Stake</a>
+              </li>
+            </ul>
+          </div>
+          <div className="wallet">
+          <Connection />
+          </div>
+        </header>
+        <div className="divider"></div>
+        <React.Fragment>
+          {viewChange === "home" ? 
+          <Home 
+          setView={setView}
+          /> : viewChange === "swap"?
+          <LTSSwap /> : viewChange === "pool" ?
+          <CardDao contract={contract} /> : viewChange === "stake" ?
+          <Stake /> : ""}
+        </React.Fragment>
+   
+        <footer>
+        <p class="card-text"><small class="text-muted"></small><small> LiteSwap is sponsored by Binance Africa Master Class 2012 All Right Reserved</small></p>
+        </footer>
       </div>
     );
-  }
+  
 }
+
 
 export default App;
